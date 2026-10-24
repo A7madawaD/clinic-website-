@@ -1,0 +1,418 @@
+/* ================================================================= */
+/* [SECTION 1]: MAIN NAVBAR & HEADER STYLES */
+/* ================================================================= */
+html {
+  scroll-behavior: smooth;
+}
+/* الشريط العلوي للمعلومات (ساعات العمل والخط الساخن) */
+/* Custom styling for Hadith wrapper in Header */
+.header-info-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.header-info-wrapper:hover {
+  border-color: #0d6efd;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.08) !important;
+}
+
+/* Size utility for small subtitle label */
+.fs-8 {
+  font-size: 0.725rem !important;
+}
+
+/* ================================================================= */
+/* [SECTION 2]: TABS NAVIGATION STYLES (قائمة التبويبات) */
+/* ================================================================= */
+
+.tab-card-wrapper {
+  border-color: #dee2e6 !important;
+  background-color: #ffffff;
+}
+
+.custom-border-tabs {
+  border-bottom: 1px solid #dee2e6 !important;
+  margin-bottom: 0;
+}
+
+.custom-border-tabs .nav-link {
+  color: #495057;
+  font-weight: 500;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  margin-bottom: -1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-border-tabs .nav-link:hover {
+  border-color: #e9ecef #e9ecef #dee2e6;
+  color: #0d6efd;
+}
+
+.custom-border-tabs .nav-link.active {
+  color: #0d6efd !important;
+  font-weight: 600;
+  background-color: #ffffff !important;
+  border-color: #dee2e6 #dee2e6 #ffffff !important;
+}
+
+/* ================================================================= */
+/* 🏠 [TAB 1]: HOME SECTION STYLES */
+/* ================================================================= */
+
+/* ----------------------------------------------------------------- */
+/* 1.1 HERO SLIDER SUB-SECTION (سلايدر الرئيسية) */
+/* ----------------------------------------------------------------- */
+.hero-slide-container {
+  background: linear-gradient(135deg, #0f2035 0%, #1a365d 100%);
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+}
+
+/* صورة الطبيب في الهيرو */
+.hero-doctor-img {
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.hero-doctor-img:hover {
+  transform: translateY(-5px);
+}
+
+/* حركة الأزرار التفاعلية */
+.interactive-btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.interactive-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------------------------------------------------- */
+/* 1.2 FEATURES OVERLAP SUB-SECTION (المميزات المتداخلة أسفل السلايدر) */
+/* ----------------------------------------------------------------- */
+.features-overlap-wrapper {
+  margin-top: -65px; /* يرفع الكرت ليتداخل بجمالية فوق السلايدر */
+  z-index: 20;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-card {
+  background: #ffffff;
+  border-radius: 24px !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06) !important;
+  padding: 2rem 1.5rem !important;
+}
+
+/* دائرة الأيقونة الفاتحة في المنتصف */
+.feature-icon-box {
+  width: 54px;
+  height: 54px;
+  background-color: #e8f2ff !important;
+  color: #0d6efd !important;
+  transition: all 0.3s ease;
+}
+
+/* تفاعل الأيقونة عند مرور الماوس */
+.feature-item {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+}
+
+.feature-item:hover .feature-icon-box {
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.3);
+}
+
+.fs-7 {
+  font-size: 0.8rem !important;
+}
+/* ================================================================= */
+/* 👨‍⚕️ [HOME SECTION]: EXPERT DOCTORS CARDS STYLES */
+/* ================================================================= */
+.doctor-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.doctor-img-wrapper {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+/* ================================================================= */
+/* 👨‍⚕️ [TAB 2]: DOCTORS SECTION STYLES */
+/* ================================================================= */
+.doctors-banner-section {
+  /* خلفية طبية فاتحة مع تدرج ووضع صورة الطبيب في الخلفية جهة اليمين */
+  background:
+    linear-gradient(
+      90deg,
+      rgba(240, 246, 255, 0.95) 0%,
+      rgba(240, 246, 255, 0.6) 60%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    url("../images/09-medical-consultation.png") no-repeat right center;
+  background-size: cover;
+  border: 1px solid #e2e8f0;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+}
+.doctor-card {
+  border: 1px solid #f0f3f6 !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+  border-color: #0d6efd !important;
+}
+/* تنسيق للشاشات الصغيرة لضمان وضوح النص فوق الخلفية */
+@media (max-width: 767.98px) {
+  .doctors-banner-section {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(240, 246, 255, 0.95) 0%,
+        rgba(240, 246, 255, 0.9) 100%
+      ),
+      url("../images/01-hero-doctor.png") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+  }
+}
+
+/* ================================================================= */
+/* RESPONSIVE BREAKPOINTS (تنسيقات الأجهزة المتجاوبة) */
+/* ================================================================= */
+
+/* 1. DEFAULT (X-Small devices / Portrait phones - less than 576px) */
+.careplus-navbar-container {
+  padding: 0.5rem !important;
+}
+
+.careplus-navbar-container > div:first-child {
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+/* إخفاء عناصر البحث في الشاشات الصغيرة جداً لتوفير مساحة مطابقة لتصميم الموبايل */
+.search-box,
+.header-info-wrapper {
+  display: none !important;
+}
+
+/* التبويبات كقائمة أفقية قابلة للسحب للمقاسات الضيقة */
+.custom-border-tabs {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+}
+
+.custom-border-tabs::-webkit-scrollbar {
+  display: none;
+}
+.custom-border-tabs {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-border-tabs .nav-link {
+  padding: 0.35rem 0.7rem !important;
+  font-size: 0.8rem !important;
+}
+
+/* 2. Small devices (landscape phones, 576px and up) */
+@media (width >= 576px) {
+  .careplus-navbar-container {
+    padding: 0.75rem !important;
+  }
+
+  /* إعادة إظهار البحث بمقاسات مناسبة */
+  .search-box {
+    display: flex !important;
+  }
+
+  .search-box input {
+    width: 140px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .careplus-navbar-container button.btn-primary {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* ضبط سلايدر الهيرو في الشاشات الصغيرة */
+  .hero-slide-container {
+    padding: 1.5rem 1rem !important;
+    min-height: auto !important;
+    text-align: center !important;
+  }
+
+  .hero-slide-container .row {
+    flex-direction: column-reverse !important;
+  }
+
+  .hero-doctor-img {
+    max-height: 240px !important;
+    margin: 0 auto 1rem auto !important;
+    display: block !important;
+  }
+
+  .hero-slide-container h1 {
+    font-size: 1.35rem !important;
+  }
+
+  .hero-slide-container p {
+    font-size: 0.85rem !important;
+  }
+
+  .hero-slide-container .d-flex.align-items-center.gap-3 {
+    justify-content: center !important;
+  }
+}
+
+/* 3. Medium devices (tablets, 768px and up) */
+@media (width >= 768px) {
+  .careplus-navbar-container > div:first-child {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+
+  .careplus-navbar-container img[alt="CarePlus Logo"] {
+    height: 36px !important;
+  }
+
+  .search-box input {
+    width: 180px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .custom-border-tabs {
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+  }
+
+  .custom-border-tabs .nav-link {
+    padding: 0.5rem 1.1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* استرجاع توازن الهيرو للتابلت والشاشات الأكبر */
+  .hero-slide-container {
+    text-align: left !important;
+    padding: 3rem !important;
+    min-height: 420px !important;
+  }
+
+  .hero-slide-container .row {
+    flex-direction: row !important;
+  }
+
+  .hero-slide-container .col-lg-7 {
+    text-align: left !important;
+  }
+
+  .hero-slide-container h1 {
+    font-size: 2rem !important;
+  }
+
+  .hero-slide-container .d-flex.align-items-center.gap-3 {
+    justify-content: flex-start !important;
+  }
+
+  .hero-doctor-img {
+    max-height: 350px !important;
+    margin: 0 !important;
+  }
+}
+
+/* 4. Large devices (desktops, 1024px and up) */
+@media (width >= 1024px) {
+  .careplus-navbar-container {
+    padding: 1rem !important;
+  }
+
+  .header-info-wrapper {
+    display: flex !important; /* إظهار معلومات العمل والخط الساخن في الشاشات الكبيرة */
+  }
+
+  .search-box input {
+    width: 220px !important;
+  }
+
+  .careplus-navbar-container button.btn-primary {
+    padding: 0.5rem 1.25rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .hero-slide-container {
+    min-height: 450px !important;
+  }
+
+  .hero-slide-container h1 {
+    font-size: 2.25rem !important;
+  }
+
+  .hero-doctor-img {
+    max-height: 400px !important;
+  }
+
+  /* الفواصل الرأسية بين أعمدة المميزات */
+  .border-end-lg {
+    border-right: 1px solid #f0f3f6 !important;
+  }
+}
+
+/* 5. X-Large devices (large desktops, 1280px and up) */
+@media (width >= 1280px) {
+  .features-overlap-wrapper {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-box input {
+    width: 250px !important;
+  }
+}
+
+/* 6. XX-Large devices (larger desktops, 1536px and up) */
+@media (width >= 1536px) {
+  .features-overlap-wrapper {
+    max-width: 1320px;
+  }
+}
+.tab-pane h4 {
+  color: #0f2035;
+}
