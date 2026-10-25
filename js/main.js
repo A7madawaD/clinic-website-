@@ -34,33 +34,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const iconBox = item.querySelector(".live-icon");
 
     if (iconBox) {
-      // Mouse Enter (Live Hover Animation)
       item.addEventListener("mouseenter", function () {
         iconBox.style.transform = "scale(1.1) rotate(5deg)";
         iconBox.style.transition =
           "transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
       });
 
-      // Mouse Leave (Reset to Normal)
       item.addEventListener("mouseleave", function () {
         iconBox.style.transform = "scale(1) rotate(0deg)";
       });
 
-      // Mouse Down (Click Ripple/Press Effect)
       item.addEventListener("mousedown", function () {
         iconBox.style.transform = "scale(0.92)";
       });
 
-      // Mouse Up (Release Effect)
       item.addEventListener("mouseup", function () {
         iconBox.style.transform = "scale(1.1) rotate(5deg)";
       });
     }
   });
 });
+
 /* ================================================================= */
-/* 🔑 [AUTHENTICATION SECTION]: TOGGLE PASSWORD VISIBILITY           */
-/* وظيفة إظهار وإخفاء كلمة المرور عند النقر على أيقونة العين          */
+/* 🔑 [AUTHENTICATION SECTION]: TOGGLE PASSWORD VISIBILITY */
 /* ================================================================= */
 document.addEventListener("DOMContentLoaded", function () {
   const togglePassword = document.getElementById("togglePassword");
@@ -69,35 +65,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (togglePassword && passwordInput && eyeIcon) {
     togglePassword.addEventListener("click", function () {
-      // التحقق من نوع الحقل الحالي وتغييره
       const type =
         passwordInput.getAttribute("type") === "password" ? "text" : "password";
       passwordInput.setAttribute("type", type);
 
-      // تبديل شكل الأيقونة بين العين المفتوحة والمغلقة
       if (type === "text") {
         eyeIcon.classList.remove("fa-eye");
-        eyeIcon.classList.add("fa-eye-slash"); // أيقونة العين المشطوبة
+        eyeIcon.classList.add("fa-eye-slash");
       } else {
         eyeIcon.classList.remove("fa-eye-slash");
-        eyeIcon.classList.add("fa-eye"); // أيقونة العين العادية
+        eyeIcon.classList.add("fa-eye");
       }
     });
   }
 });
 
-// log in
-document.addEventListener("DOMContentLoaded", function () {
-  const loginForm = document.querySelector("#login-pane form");
-
-  if (loginForm) {
-    loginForm.addEventListener("submit", function (e) {
-      e.preventDefault(); // يمنع إعادة تحميل الصفحة أو طلوعها للأعلى
-    });
-  }
-});
 /* ================================================================= */
-/* 👨‍⚕️ [DOCTORS TAB]: FILTER DOCTORS CARDS & BUTTON TOGGLE           */
+/* 👨‍⚕️ [DOCTORS TAB]: FILTER DOCTORS CARDS & BUTTON TOGGLE */
 /* ================================================================= */
 document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = document.querySelectorAll(
@@ -108,22 +92,18 @@ document.addEventListener("DOMContentLoaded", function () {
   if (filterButtons.length > 0) {
     filterButtons.forEach((button) => {
       button.addEventListener("click", function () {
-        // 1. إعادة تعيين شكل كل الأزرار إلى الزر المفرغ (outline)
         filterButtons.forEach((btn) => {
           btn.classList.remove("btn-primary", "active");
           btn.classList.add("btn-outline-primary");
         });
 
-        // 2. تفعيل الزر المضغوط (تعبئة باللون الأزرق والنص أبيض)
         this.classList.remove("btn-outline-primary");
         this.classList.add("btn-primary", "active");
 
-        // 3. إظهار/إخفاء الأطباء حسب التخصص
         const filterValue = this.getAttribute("data-filter");
 
         doctorItems.forEach((item) => {
           const category = item.getAttribute("data-category");
-
           if (filterValue === "all" || category === filterValue) {
             item.style.display = "block";
           } else {
@@ -136,45 +116,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* ================================================================= */
-/* 🔗 BOOK APPOINTMENT SCROLL & FORM HANDLING                         */
+/* 🔗 BOOK APPOINTMENT FORM & LOCALSTORAGE USER HANDLING */
 /* ================================================================= */
 document.addEventListener("DOMContentLoaded", function () {
-  const bookBtn = document.getElementById("bookAppointmentBtn");
-  const appointmentSection = document.getElementById("appointmentSection");
-  const bookingForm = document.getElementById("bookingForm");
-
-  // 1. التمرير السلس إلى قسم حجز الموعد عند النقر على الزر
-  if (bookBtn && appointmentSection) {
-    bookBtn.addEventListener("click", function () {
-      appointmentSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-  }
-
-  // 2. منع إعادة تحميل الصفحة عند إرسال النموذج (Form Submit)
-  if (bookingForm) {
-    bookingForm.addEventListener("submit", function (e) {
+  const loginForm = document.querySelector("#login-pane form");
+  if (loginForm) {
+    loginForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      alert("تم استلام طلب الحجز بنجاح!");
     });
   }
-});
-// loding to dashboard
-document.addEventListener("DOMContentLoaded", function () {
-  const bookingForm = document.getElementById("bookingForm");
 
-  if (bookingForm) {
-    bookingForm.addEventListener("submit", function (e) {
-      e.preventDefault(); // منع إعادة تحميل الصفحة
-      alert("تم تسجيل الحجز بنجاح! جاري الانتقال إلى لوحة التحكم...");
-      window.location.href = "dashboard.html"; // الانتقال للوحة التحكم
-    });
-  }
-});
-document.addEventListener("DOMContentLoaded", function () {
-  // 1. عند إرسال نموذج الحجز في booking.html
   const bookingForm = document.getElementById("bookingForm");
   const patientNameInput = document.getElementById("patientName");
 
@@ -182,37 +133,84 @@ document.addEventListener("DOMContentLoaded", function () {
     bookingForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // جلب الاسم المدخل من المستخدم
       const enteredName =
         patientNameInput && patientNameInput.value.trim() !== ""
           ? patientNameInput.value.trim()
           : "Ahmed";
 
-      // حفظ الاسم في ذاكرة المتصفح المحلية
       localStorage.setItem("carePlusUserName", enteredName);
 
       alert("تم تسجيل الحجز بنجاح! جاري الانتقال إلى لوحة التحكم...");
-
-      // التوجيه لصفحة لوحة التحكم
       window.location.href = "dashboard.html";
     });
   }
 
-  // 2. عند فتح لوحة التحكم dashboard.html
   const dashboardUserName = document.getElementById("dashboardUserName");
   const greetingUserName = document.getElementById("greetingUserName");
-
-  // قراءة الاسم المخزن
   const savedName = localStorage.getItem("carePlusUserName");
 
   if (savedName) {
-    // تحديث الاسم العلوي بجوار الصورة الشخصية
     if (dashboardUserName) {
       dashboardUserName.textContent = savedName;
     }
-    // تحديث الاسم في عنوان الترحيب (Hello, Name 👋)
     if (greetingUserName) {
       greetingUserName.textContent = savedName;
     }
+  }
+});
+
+/* ================================================================= */
+/* 🏥 [SERVICES TAB]: FILTER & SEARCH SERVICES */
+/* ================================================================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const filterBtns = document.querySelectorAll(
+    "#filterButtonsContainer .filter-btn",
+  );
+  const serviceCards = document.querySelectorAll(".service-card-item");
+  const searchInput = document.getElementById("serviceSearchInput");
+
+  if (filterBtns.length > 0) {
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        filterBtns.forEach((b) => {
+          b.classList.remove("btn-primary", "text-white");
+          b.classList.add("btn-white", "bg-white", "text-dark");
+        });
+
+        this.classList.remove("btn-white", "bg-white", "text-dark");
+        this.classList.add("btn-primary", "text-white");
+
+        const selectedCategory = this.getAttribute("data-category");
+
+        serviceCards.forEach((card) => {
+          const cardCategory = card.getAttribute("data-category");
+          if (selectedCategory === "all" || cardCategory === selectedCategory) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", function () {
+      const query = this.value.toLowerCase().trim();
+
+      serviceCards.forEach((card) => {
+        const titleData = card.getAttribute("data-title") || "";
+        const cardText = card.textContent.toLowerCase();
+
+        if (
+          titleData.toLowerCase().includes(query) ||
+          cardText.includes(query)
+        ) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
   }
 });

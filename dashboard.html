@@ -12,427 +12,421 @@
     />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- Custom CSS -->
+    <!-- Custom Main CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="bg-light">
-    <!-- ================================================================= -->
-    <!-- PATIENT DASHBOARD SECTION -->
-    <!-- ================================================================= -->
-    <section class="py-4 py-md-5">
-      <div class="container-fluid px-lg-5">
-        <div class="card border-0 shadow-lg rounded-4 overflow-hidden bg-white">
-          <div class="row g-0">
-            <!-- Sidebar (القائمة الجانبية الداكنة) -->
-            <div
-              class="col-lg-3 text-white p-4 d-flex flex-column justify-content-between"
-              style="background-color: #112240; min-height: 700px"
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar (القائمة الجانبية المطابقة للصورة تماماً) -->
+        <div
+          class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark min-vh-100 d-flex flex-column justify-content-between"
+          style="background-color: #0b192c !important"
+        >
+          <div class="p-3">
+            <a
+              href="index.html"
+              class="d-flex align-items-center text-decoration-none gap-2 mb-4 text-white"
             >
-              <div>
-                <!-- Brand Logo -->
-                <div class="d-flex align-items-center gap-2 mb-5">
-                  <img src="images/H.png" alt="CarePlus" height="32" />
-                  <span class="fw-bold fs-5 text-white">CarePlus</span>
-                </div>
+              <img src="images/H.png" alt="Logo" height="35" />
+              <span class="fw-bold fs-5">CarePlus</span>
+            </a>
 
-                <!-- Navigation Links -->
-                <div class="nav flex-column nav-pills gap-2" role="tablist">
-                  <a
-                    href="#"
-                    class="nav-link active rounded-3 py-2.5 px-3 text-white d-flex align-items-center gap-3"
-                    style="background-color: #0d6efd"
+            <ul class="nav nav-pills flex-column mb-auto gap-1">
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link active text-white py-2.5 px-3 rounded-3"
+                  style="background-color: #0d6efd"
+                >
+                  <i class="fa-solid fa-table-cells-large me-2"></i> Dashboard
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-white-50 py-2.5 px-3 rounded-3"
+                >
+                  <i class="fa-regular fa-calendar-check me-2"></i> Appointments
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-white-50 py-2.5 px-3 rounded-3"
+                >
+                  <i class="fa-solid fa-file-medical me-2"></i> Medical Records
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-white-50 py-2.5 px-3 rounded-3"
+                >
+                  <i class="fa-regular fa-user me-2"></i> Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-white-50 py-2.5 px-3 rounded-3"
+                >
+                  <i class="fa-solid fa-gear me-2"></i> Settings
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- زر تسجيل الخروج في الأسفل -->
+          <div class="p-3 border-top border-secondary">
+            <a
+              href="index.html"
+              class="nav-link text-white-50 py-2 px-3 rounded-3"
+            >
+              <i class="fa-solid fa-arrow-right-from-bracket me-2"></i> Log Out
+            </a>
+          </div>
+        </div>
+
+        <!-- Main Content Area (محتوى لوحة التحكم الرئيسي) -->
+        <div class="col px-4 py-4">
+          <!-- Top Bar -->
+          <div
+            class="d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom"
+          >
+            <div
+              class="input-group bg-white rounded-pill px-3 py-1 shadow-sm border"
+              style="max-width: 350px"
+            >
+              <span class="input-group-text bg-transparent border-0 text-muted"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></span>
+              <input
+                type="text"
+                class="form-control border-0 shadow-none bg-transparent fs-8"
+                placeholder="Search..."
+              />
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <i class="fa-regular fa-bell text-muted fs-5 cursor-pointer"></i>
+              <div class="d-flex align-items-center gap-2">
+                <div class="text-end lh-sm">
+                  <span
+                    class="d-block fw-bold text-dark fs-7"
+                    id="dashboardUserName"
+                    >Ahmed Hassan</span
                   >
-                    <i class="fa-solid fa-border-all"></i>
-                    <span>Dashboard</span>
-                  </a>
-                  <a
-                    href="#"
-                    class="nav-link text-white-50 rounded-3 py-2.5 px-3 d-flex align-items-center gap-3"
+                  <small class="text-muted" style="font-size: 0.7rem"
+                    >Patient</small
                   >
-                    <i class="fa-regular fa-calendar-check"></i>
-                    <span>Appointments</span>
-                  </a>
-                  <a
-                    href="#"
-                    class="nav-link text-white-50 rounded-3 py-2.5 px-3 d-flex align-items-center gap-3"
+                </div>
+                <img
+                  src="images/userface.png"
+                  alt="Profile"
+                  class="rounded-circle border"
+                  style="width: 38px; height: 38px; object-fit: cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Welcome Message -->
+          <div class="mb-4">
+            <h3 class="fw-bold text-dark mb-1">
+              Hello, <span id="greetingUserName">Ahmed</span> 👋
+            </h3>
+            <p class="text-muted fs-8">
+              Here's your health summary and upcoming appointments.
+            </p>
+          </div>
+
+          <!-- Top Row: Statistics & Quick Actions -->
+          <div class="row g-4 mb-4">
+            <!-- Statistics Cards -->
+            <div class="col-lg-8">
+              <div class="row g-4 h-100">
+                <div class="col-md-6">
+                  <div
+                    class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100 d-flex flex-column justify-content-between"
                   >
-                    <i class="fa-solid fa-file-medical"></i>
-                    <span>Medical Records</span>
-                  </a>
-                  <a
-                    href="#"
-                    class="nav-link text-white-50 rounded-3 py-2.5 px-3 d-flex align-items-center gap-3"
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3"
+                    >
+                      <div>
+                        <small class="text-muted fw-medium d-block mb-1"
+                          >Next Appointment</small
+                        >
+                        <h5 class="fw-bold text-dark mb-0">12 Nov 2026</h5>
+                        <small class="text-muted fs-8"
+                          >10:00 AM - Dr. Ahmed Hassan</small
+                        >
+                      </div>
+                      <div class="bg-primary-subtle text-primary rounded-3 p-3">
+                        <i class="fa-regular fa-calendar fs-4"></i>
+                      </div>
+                    </div>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none fw-semibold fs-8"
+                      >View Details</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100 d-flex flex-column justify-content-between"
                   >
-                    <i class="fa-regular fa-user"></i>
-                    <span>Profile</span>
-                  </a>
-                  <a
-                    href="#"
-                    class="nav-link text-white-50 rounded-3 py-2.5 px-3 d-flex align-items-center gap-3"
-                  >
-                    <i class="fa-solid fa-gear"></i>
-                    <span>Settings</span>
-                  </a>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3"
+                    >
+                      <div>
+                        <small class="text-muted fw-medium d-block mb-1"
+                          >Total Appointments</small
+                        >
+                        <h3 class="fw-bold text-dark mb-0">5</h3>
+                        <small class="text-muted fs-8">This year</small>
+                      </div>
+                      <div class="bg-primary-subtle text-primary rounded-3 p-3">
+                        <i class="fa-solid fa-chart-line fs-4"></i>
+                      </div>
+                    </div>
+                    <a
+                      href="#"
+                      class="text-primary text-decoration-none fw-semibold fs-8"
+                      >View All</a
+                    >
+                  </div>
                 </div>
               </div>
-
-              <!-- Log Out -->
-              <a
-                href="booking.html"
-                class="text-white-50 text-decoration-none d-flex align-items-center gap-3 px-3 py-2"
-              >
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                <span>Log Out</span>
-              </a>
             </div>
 
-            <!-- Main Dashboard Content (محتوى اللوحة الرئيسي) -->
-            <div class="col-lg-9 p-4 p-md-5 bg-light-subtle">
-              <!-- Top Bar (Search & User Profile) -->
-              <div
-                class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4"
-              >
-                <!-- Search Bar -->
+            <!-- Quick Actions -->
+            <div class="col-lg-4">
+              <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+                <h5 class="fw-bold text-dark mb-3 fs-6">Quick Actions</h5>
+                <div class="d-flex flex-column gap-2">
+                  <a
+                    href="booking.html"
+                    class="btn btn-light border text-start py-2 px-3 rounded-3 d-flex align-items-center justify-content-between text-dark text-decoration-none fw-medium fs-8"
+                  >
+                    <span
+                      ><i
+                        class="fa-solid fa-calendar-plus text-primary me-2"
+                      ></i>
+                      Book New Appointment</span
+                    >
+                    <i class="fa-solid fa-chevron-right text-muted fs-9"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn-light border text-start py-2 px-3 rounded-3 d-flex align-items-center justify-content-between text-dark text-decoration-none fw-medium fs-8"
+                  >
+                    <span
+                      ><i
+                        class="fa-solid fa-file-medical text-primary me-2"
+                      ></i>
+                      View Medical Records</span
+                    >
+                    <i class="fa-solid fa-chevron-right text-muted fs-9"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn-light border text-start py-2 px-3 rounded-3 d-flex align-items-center justify-content-between text-dark text-decoration-none fw-medium fs-8"
+                  >
+                    <span
+                      ><i class="fa-regular fa-user text-primary me-2"></i>
+                      Update Profile</span
+                    >
+                    <i class="fa-solid fa-chevron-right text-muted fs-9"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Upcoming Appointments & Recent Medical Records -->
+          <div class="row g-4">
+            <!-- Upcoming Appointments (المواعيد القادمة) -->
+            <div class="col-lg-8">
+              <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
                 <div
-                  class="input-group bg-white rounded-pill px-3 py-1 shadow-sm border"
-                  style="max-width: 400px; width: 100%"
+                  class="d-flex align-items-center justify-content-between mb-3"
                 >
-                  <span
-                    class="input-group-text bg-transparent border-0 text-muted"
+                  <h5 class="fw-bold text-dark mb-0 fs-6">
+                    Upcoming Appointments
+                  </h5>
+                  <a
+                    href="#"
+                    class="text-primary text-decoration-none fw-semibold fs-8"
+                    >See All →</a
                   >
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </span>
-                  <input
-                    type="text"
-                    class="form-control border-0 shadow-none bg-transparent fs-7"
-                    placeholder="Search..."
-                  />
                 </div>
 
-                <!-- User Profile & Notifications -->
-                <div class="d-flex align-items-center gap-3">
-                  <button
-                    class="btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center shadow-sm"
-                    style="width: 40px; height: 40px"
-                  >
-                    <i class="fa-regular fa-bell text-secondary"></i>
-                  </button>
-                  <div class="d-flex align-items-center gap-2">
-                    <img
-                      src="images/userface.png"
-                      class="rounded-circle"
-                      width="40"
-                      height="40"
-                      style="object-fit: cover"
-                      alt="userface"
-                    />
-                    <div>
-                      <!-- أضفنا id="dashboardUserName" هنا -->
-                      <h6
-                        class="fw-bold text-dark mb-0 fs-7"
-                        id="dashboardUserName"
-                      >
-                        Ahmed Hassan
-                      </h6>
-                      <small class="text-muted" style="font-size: 0.7rem"
-                        >Patient</small
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Greeting -->
-              <div class="mb-4">
-                <h4 class="fw-bold text-dark mb-1">
-                  Hello, <span id="greetingUserName">Ahmed</span> 👋
-                </h4>
-                <p class="text-muted fs-7">
-                  Here's your health summary and upcoming appointments.
-                </p>
-              </div>
-
-              <!-- Cards Summary & Quick Actions Layout -->
-              <div class="row g-4 mb-4">
-                <!-- Left Side: Summary Cards -->
-                <div class="col-lg-8">
-                  <div class="row g-3">
-                    <!-- Next Appointment -->
-                    <div class="col-md-6">
-                      <div
-                        class="card border-0 shadow-sm rounded-4 p-3 bg-white h-100"
-                      >
-                        <div class="d-flex align-items-start gap-3">
-                          <div
-                            class="rounded-3 bg-subtle-blue text-primary p-3 d-flex align-items-center justify-content-center"
-                          >
-                            <i class="fa-regular fa-calendar fs-4"></i>
-                          </div>
-                          <div>
-                            <span class="text-muted fs-8 d-block mb-1"
-                              >Next Appointment</span
-                            >
-                            <h6 class="fw-bold text-dark mb-1">12 Nov 2026</h6>
-                            <small class="text-muted fs-8 d-block mb-2"
-                              >10:00 AM - Dr. Ahmed Hassan</small
-                            >
-                            <a
-                              href="#"
-                              class="text-primary fw-semibold fs-8 text-decoration-none"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Total Appointments -->
-                    <div class="col-md-6">
-                      <div
-                        class="card border-0 shadow-sm rounded-4 p-3 bg-white h-100"
-                      >
-                        <div class="d-flex align-items-start gap-3">
-                          <div
-                            class="rounded-3 bg-subtle-blue text-primary p-3 d-flex align-items-center justify-content-center"
-                          >
-                            <i class="fa-regular fa-calendar-check fs-4"></i>
-                          </div>
-                          <div>
-                            <span class="text-muted fs-8 d-block mb-1"
-                              >Total Appointments</span
-                            >
-                            <h6 class="fw-bold text-dark mb-1">5</h6>
-                            <small class="text-muted fs-8 d-block mb-2"
-                              >This year</small
-                            >
-                            <a
-                              href="#"
-                              class="text-primary fw-semibold fs-8 text-decoration-none"
-                              >View All</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Right Side: Quick Actions (الإجراءات السريعة مطابقة للصورة) -->
-                <div class="col-lg-4">
-                  <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
-                    <h6 class="fw-bold text-dark mb-3 fs-7">Quick Actions</h6>
-                    <div class="d-flex flex-column gap-2">
-                      <a
-                        href="booking.html"
-                        class="btn btn-light text-start py-2 px-3 rounded-3 text-primary fw-semibold fs-8 d-flex align-items-center gap-2 text-decoration-none border-0 bg-light-subtle"
-                      >
-                        <i class="fa-regular fa-calendar-plus"></i>
-                        <span>Book New Appointment</span>
-                      </a>
-                      <a
-                        href="#"
-                        class="btn btn-light text-start py-2 px-3 rounded-3 text-secondary fw-semibold fs-8 d-flex align-items-center gap-2 text-decoration-none border-0"
-                      >
-                        <i class="fa-solid fa-file-medical"></i>
-                        <span>View Medical Records</span>
-                      </a>
-                      <a
-                        href="#"
-                        class="btn btn-light text-start py-2 px-3 rounded-3 text-secondary fw-semibold fs-8 d-flex align-items-center gap-2 text-decoration-none border-0"
-                      >
-                        <i class="fa-regular fa-user"></i>
-                        <span>Update Profile</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Bottom Row: Upcoming Appointments & Recent Medical Records -->
-              <div class="row g-4">
-                <!-- Upcoming Appointments List -->
-                <div class="col-lg-8">
-                  <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <h6 class="fw-bold text-dark m-0">
-                        Upcoming Appointments
-                      </h6>
-                      <a
-                        href="#"
-                        class="text-primary fw-semibold fs-8 text-decoration-none d-flex align-items-center gap-1"
-                      >
-                        <span>See All</span>
-                        <i class="fa-solid fa-arrow-right fs-8"></i>
-                      </a>
-                    </div>
-
-                    <div class="d-flex flex-column gap-3">
-                      <!-- Item 1 -->
-                      <div
-                        class="d-flex align-items-center justify-content-between flex-wrap gap-2 pb-3 border-bottom"
-                      >
-                        <div>
-                          <h6 class="fw-bold text-dark mb-1 fs-7">
-                            12 Nov 2026
-                          </h6>
-                          <small class="text-muted fs-8">10:00 AM</small>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                          <img
-                            src="images/03-doctor-ahmed-card.png"
-                            class="rounded-circle"
-                            width="36"
-                            height="36"
-                            style="object-fit: cover"
-                            alt="Doctor"
-                          />
-                          <div>
-                            <h6 class="fw-bold text-dark mb-0 fs-8">
-                              Dr. Ahmed Hassan
-                            </h6>
-                            <small class="text-muted fs-8"
-                              >General Medicine</small
-                            >
-                          </div>
-                        </div>
-                        <span
-                          class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 fs-8 fw-semibold"
-                          >Upcoming</span
-                        >
-                      </div>
-
-                      <!-- Item 2 -->
-                      <div
-                        class="d-flex align-items-center justify-content-between flex-wrap gap-2 pb-3 border-bottom"
-                      >
-                        <div>
-                          <h6 class="fw-bold text-dark mb-1 fs-7">
-                            28 Oct 2026
-                          </h6>
-                          <small class="text-muted fs-8">02:30 PM</small>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                          <img
-                            src="images/04-doctor-sara-card.png"
-                            class="rounded-circle"
-                            width="36"
-                            height="36"
-                            style="object-fit: cover"
-                            alt="Doctor"
-                          />
-                          <div>
-                            <h6 class="fw-bold text-dark mb-0 fs-8">
-                              Dr. Sara Mohamed
-                            </h6>
-                            <small class="text-muted fs-8">Pediatrics</small>
-                          </div>
-                        </div>
-                        <span
-                          class="badge bg-success-subtle text-success rounded-pill px-3 py-2 fs-8 fw-semibold"
-                          >Completed</span
-                        >
-                      </div>
-
-                      <!-- Item 3 -->
-                      <div
-                        class="d-flex align-items-center justify-content-between flex-wrap gap-2"
-                      >
-                        <div>
-                          <h6 class="fw-bold text-dark mb-1 fs-7">
-                            15 Sep 2026
-                          </h6>
-                          <small class="text-muted fs-8">11:00 AM</small>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                          <img
-                            src="images/05-doctor-omar-card.png"
-                            class="rounded-circle"
-                            width="36"
-                            height="36"
-                            style="object-fit: cover"
-                            alt="Doctor"
-                          />
-                          <div>
-                            <h6 class="fw-bold text-dark mb-0 fs-8">
-                              Dr. Omar El-Sayed
-                            </h6>
-                            <small class="text-muted fs-8">Dermatology</small>
-                          </div>
-                        </div>
-                        <span
-                          class="badge bg-success-subtle text-success rounded-pill px-3 py-2 fs-8 fw-semibold"
-                          >Completed</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Recent Medical Records -->
-                <div class="col-lg-4">
+                <div class="d-flex flex-column gap-3">
+                  <!-- موعد 1 -->
                   <div
-                    class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                    class="d-flex align-items-center justify-content-between p-3 bg-light rounded-3"
                   >
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <h6 class="fw-bold text-dark m-0 fs-7">
-                        Recent Medical Records
-                      </h6>
-                      <a
-                        href="#"
-                        class="text-primary fw-semibold fs-8 text-decoration-none"
-                        >See All →</a
+                    <div class="lh-sm">
+                      <span class="fw-bold text-dark d-block fs-8"
+                        >12 Nov 2026</span
                       >
+                      <small class="text-muted fs-9">10:00 AM</small>
                     </div>
-
-                    <div class="d-flex flex-column gap-3">
-                      <div
-                        class="d-flex align-items-center gap-3 pb-2 border-bottom"
-                      >
-                        <div class="text-primary bg-subtle-blue rounded-3 p-2">
-                          <i class="fa-solid fa-file-lines"></i>
-                        </div>
-                        <div>
-                          <h6 class="fw-bold text-dark mb-0 fs-8">
-                            General Checkup
-                          </h6>
-                          <small class="text-muted" style="font-size: 0.7rem"
-                            >12 Nov 2026</small
-                          >
-                        </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <img
+                        src="images/03-doctor-ahmed-card.png"
+                        alt="Dr. Ahmed"
+                        class="rounded-circle border"
+                        width="32"
+                        height="32"
+                        style="object-fit: cover"
+                      />
+                      <div>
+                        <h6 class="fw-bold text-dark m-0 fs-8">
+                          Dr. Ahmed Hassan
+                        </h6>
+                        <small class="text-muted fs-9">General Medicine</small>
                       </div>
+                    </div>
+                    <span
+                      class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fs-9 fw-semibold"
+                      >Upcoming</span
+                    >
+                  </div>
 
-                      <div
-                        class="d-flex align-items-center gap-3 pb-2 border-bottom"
+                  <!-- موعد 2 -->
+                  <div
+                    class="d-flex align-items-center justify-content-between p-3 bg-light rounded-3"
+                  >
+                    <div class="lh-sm">
+                      <span class="fw-bold text-dark d-block fs-8"
+                        >28 Oct 2026</span
                       >
-                        <div class="text-primary bg-subtle-blue rounded-3 p-2">
-                          <i class="fa-solid fa-file-lines"></i>
-                        </div>
-                        <div>
-                          <h6 class="fw-bold text-dark mb-0 fs-8">
-                            Blood Test Results
-                          </h6>
-                          <small class="text-muted" style="font-size: 0.7rem"
-                            >28 Oct 2026</small
-                          >
-                        </div>
+                      <small class="text-muted fs-9">02:30 PM</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <img
+                        src="images/04-doctor-sara-card.png"
+                        alt="Dr. Sara"
+                        class="rounded-circle border"
+                        width="32"
+                        height="32"
+                        style="object-fit: cover"
+                      />
+                      <div>
+                        <h6 class="fw-bold text-dark m-0 fs-8">
+                          Dr. Sara Mohamed
+                        </h6>
+                        <small class="text-muted fs-9">Pediatrics</small>
                       </div>
+                    </div>
+                    <span
+                      class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fs-9 fw-semibold"
+                      >Completed</span
+                    >
+                  </div>
 
-                      <div class="d-flex align-items-center gap-3">
-                        <div class="text-primary bg-subtle-blue rounded-3 p-2">
-                          <i class="fa-solid fa-file-lines"></i>
-                        </div>
-                        <div>
-                          <h6 class="fw-bold text-dark mb-0 fs-8">
-                            Skin Consultation
-                          </h6>
-                          <small class="text-muted" style="font-size: 0.7rem"
-                            >15 Sep 2026</small
-                          >
-                        </div>
+                  <!-- موعد 3 -->
+                  <div
+                    class="d-flex align-items-center justify-content-between p-3 bg-light rounded-3"
+                  >
+                    <div class="lh-sm">
+                      <span class="fw-bold text-dark d-block fs-8"
+                        >15 Sep 2026</span
+                      >
+                      <small class="text-muted fs-9">11:00 AM</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <img
+                        src="images/05-doctor-omar-card.png"
+                        alt="Dr. Omar"
+                        class="rounded-circle border"
+                        width="32"
+                        height="32"
+                        style="object-fit: cover"
+                      />
+                      <div>
+                        <h6 class="fw-bold text-dark m-0 fs-8">
+                          Dr. Omar El-Sayed
+                        </h6>
+                        <small class="text-muted fs-9">Dermatology</small>
+                      </div>
+                    </div>
+                    <span
+                      class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fs-9 fw-semibold"
+                      >Completed</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Medical Records (السجلات الطبية الأخيرة) -->
+            <div class="col-lg-4">
+              <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-3"
+                >
+                  <h5 class="fw-bold text-dark mb-0 fs-6">
+                    Recent Medical Records
+                  </h5>
+                  <a
+                    href="#"
+                    class="text-primary text-decoration-none fw-semibold fs-8"
+                    >See All →</a
+                  >
+                </div>
+
+                <div class="d-flex flex-column gap-3">
+                  <div
+                    class="d-flex align-items-center justify-content-between p-2.5 bg-light rounded-3"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <div
+                        class="text-primary bg-white p-2 rounded-2 shadow-sm"
+                      >
+                        <i class="fa-solid fa-file-lines fs-6"></i>
+                      </div>
+                      <div>
+                        <h6 class="fw-bold text-dark m-0 fs-8">
+                          General Checkup
+                        </h6>
+                        <small class="text-muted fs-9">12 Nov 2026</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between p-2.5 bg-light rounded-3"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <div
+                        class="text-primary bg-white p-2 rounded-2 shadow-sm"
+                      >
+                        <i class="fa-solid fa-file-lines fs-6"></i>
+                      </div>
+                      <div>
+                        <h6 class="fw-bold text-dark m-0 fs-8">
+                          Blood Test Results
+                        </h6>
+                        <small class="text-muted fs-9">28 Oct 2026</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between p-2.5 bg-light rounded-3"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <div
+                        class="text-primary bg-white p-2 rounded-2 shadow-sm"
+                      >
+                        <i class="fa-solid fa-file-lines fs-6"></i>
+                      </div>
+                      <div>
+                        <h6 class="fw-bold text-dark m-0 fs-8">
+                          Skin Consultation
+                        </h6>
+                        <small class="text-muted fs-9">15 Sep 2026</small>
                       </div>
                     </div>
                   </div>
@@ -442,7 +436,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- JS Files -->
     <script src="js/bootstrap.bundle.min.js"></script>

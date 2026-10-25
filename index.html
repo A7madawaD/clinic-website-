@@ -15,12 +15,11 @@
     <!-- Custom Main CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body class="bg-light">
     <!-- ================================================================= -->
     <!-- [SECTION 1]: MAIN NAVBAR & TOP HEADER SECTION -->
     <!-- ================================================================= -->
     <section class="careplus-navbar-container p-3 bg-light">
-      <!-- TOP INFO BAR (Logo, Working Hours, Emergency Hotline, Search, Book Button) -->
       <div
         class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3 px-2"
       >
@@ -32,6 +31,7 @@
           <img src="images/H.png" alt="CarePlus Logo" height="40" />
           <span class="fw-bold fs-5 text-dark">CarePlus</span>
         </a>
+
         <!-- 1.2 MIDDLE INFO BAR (Hadith Display) -->
         <div
           class="header-info-wrapper d-none d-lg-flex align-items-center gap-3 text-primary-emphasis fs-7 px-3 py-2 rounded-pill bg-white shadow-sm border"
@@ -52,7 +52,8 @@
             </p>
           </div>
         </div>
-        <!-- 1.3 SEARCH & BOOK APPOINTMENT BUTTON & MOBILE MENU TOGGLE -->
+
+        <!-- 1.3 SEARCH & BOOK APPOINTMENT BUTTON -->
         <div class="d-flex align-items-center gap-2 ms-auto ms-lg-0">
           <label
             class="search-box position-relative d-flex align-items-center m-0"
@@ -75,8 +76,6 @@
           >
             Book Appointment
           </a>
-
-          <!-- Mobile Menu Toggle Button (Hamburger Menu) -->
         </div>
       </div>
 
@@ -98,7 +97,6 @@
               data-bs-target="#home-tab-pane"
               type="button"
               role="tab"
-              aria-controls="home-tab-pane"
               aria-selected="true"
             >
               Home
@@ -112,7 +110,6 @@
               data-bs-target="#doctors-tab-pane"
               type="button"
               role="tab"
-              aria-controls="doctors-tab-pane"
               aria-selected="false"
             >
               Doctors
@@ -126,7 +123,6 @@
               data-bs-target="#services-tab-pane"
               type="button"
               role="tab"
-              aria-controls="services-tab-pane"
               aria-selected="false"
             >
               Services
@@ -140,7 +136,6 @@
               data-bs-target="#about-tab-pane"
               type="button"
               role="tab"
-              aria-controls="about-tab-pane"
               aria-selected="false"
             >
               About
@@ -154,7 +149,6 @@
               data-bs-target="#contact-tab-pane"
               type="button"
               role="tab"
-              aria-controls="contact-tab-pane"
               aria-selected="false"
             >
               Contact
@@ -165,7 +159,7 @@
         <!-- TABS PANES CONTENT AREA -->
         <div class="tab-content p-3" id="myTabContent">
           <!-- ************************************************************* -->
-          <!-- 🏠 [TAB 1]: HOME SECTION (الصفحة الرئيسية) -->
+          <!-- 🏠 [TAB 1]: HOME SECTION -->
           <!-- ************************************************************* -->
           <div
             class="tab-pane fade show active"
@@ -174,25 +168,22 @@
             aria-labelledby="home-tab"
             tabindex="0"
           >
-            <!-- 1. HERO SLIDER SUB-SECTION -->
+            <!-- Hero Banner -->
             <div
               id="carouselExampleContent"
               class="carousel slide mb-5"
               data-bs-ride="carousel"
             >
               <div class="carousel-inner rounded-5 shadow-lg bg-dark">
-                <!-- Slide 1 -->
                 <div class="carousel-item active">
-                  <div class="container-fluid p-4 p-lg-5 hero-slide-container">
+                  <div class="container-fluid p-4 p-lg-5">
                     <div class="row align-items-center g-4">
-                      <!-- النصوص والأزرار -->
                       <div class="col-lg-7 text-white">
                         <span
                           class="text-uppercase tracking-wider fw-bold mb-2 text-info d-block"
                           style="font-size: 0.85rem; letter-spacing: 2px"
+                          >YOUR HEALTH OUR PRIORITY</span
                         >
-                          YOUR HEALTH OUR PRIORITY
-                        </span>
                         <h1 class="display-5 fw-bold mb-3 text-white lh-sm">
                           Better Health for a Brighter Tomorrow
                         </h1>
@@ -203,43 +194,20 @@
                           We provide comprehensive medical care with modern
                           technology and a team of experienced doctors.
                         </p>
-                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                        <div class="d-flex align-items-center gap-3">
                           <a
-                            href="#"
-                            class="btn btn-primary rounded-pill px-4 py-3 fw-semibold shadow-sm border-0 interactive-btn"
-                            style="
-                              background-color: #0d6efd;
-                              font-size: 0.95rem;
-                            "
+                            href="booking.html"
+                            class="btn btn-primary rounded-pill px-4 py-3 fw-semibold shadow-sm border-0"
+                            style="background-color: #0d6efd"
+                            >Book Appointment</a
                           >
-                            Book Appointment
-                          </a>
-                          <a
-                            href="#"
-                            class="btn btn-outline-light rounded-pill px-4 py-3 fw-semibold d-flex align-items-center gap-2 interactive-btn border-2"
-                            style="font-size: 0.95rem"
-                          >
-                            <span>Learn More</span>
-                            <span
-                              class="rounded-circle bg-white text-dark d-flex align-items-center justify-content-center"
-                              style="
-                                width: 24px;
-                                height: 24px;
-                                font-size: 0.7rem;
-                              "
-                            >
-                              <i class="fa-solid fa-play"></i>
-                            </span>
-                          </a>
                         </div>
                       </div>
-
-                      <!-- صورة الطبيب الموازية -->
                       <div class="col-lg-5 text-center text-lg-end">
                         <img
                           src="images/01-hero-doctor.png"
                           alt="Doctor"
-                          class="img-fluid hero-doctor-img"
+                          class="img-fluid"
                           style="max-height: 400px; object-fit: contain"
                         />
                       </div>
@@ -249,19 +217,19 @@
               </div>
             </div>
 
-            <!-- 2. FEATURES OVERLAP SUB-SECTION -->
+            <!-- Features Overlap -->
             <div class="features-overlap-wrapper px-3 position-relative mb-5">
               <div
                 class="features-card bg-white rounded-5 shadow-lg p-4 border-0"
               >
                 <div class="row g-4 align-items-center text-center">
-                  <!-- Feature 1 -->
-                  <div class="col-6 col-lg-3 feature-item border-end-lg">
+                  <div class="col-6 col-lg-3 feature-item">
                     <div
                       class="d-flex flex-column align-items-center text-center gap-2"
                     >
                       <div
-                        class="feature-icon-box bg-subtle-blue text-primary rounded-circle d-flex align-items-center justify-content-center live-icon mb-1"
+                        class="feature-icon-box bg-subtle-blue text-primary rounded-circle d-flex align-items-center justify-content-center mb-1 live-icon"
+                        style="width: 50px; height: 50px"
                       >
                         <i class="fa-solid fa-user-doctor fs-5"></i>
                       </div>
@@ -273,13 +241,13 @@
                       >
                     </div>
                   </div>
-                  <!-- Feature 2 -->
-                  <div class="col-6 col-lg-3 feature-item border-end-lg">
+                  <div class="col-6 col-lg-3 feature-item">
                     <div
                       class="d-flex flex-column align-items-center text-center gap-2"
                     >
                       <div
-                        class="feature-icon-box bg-subtle-blue text-primary rounded-circle d-flex align-items-center justify-content-center live-icon mb-1"
+                        class="feature-icon-box bg-subtle-blue text-primary rounded-circle d-flex align-items-center justify-content-center mb-1 live-icon"
+                        style="width: 50px; height: 50px"
                       >
                         <i class="fa-solid fa-microscope fs-5"></i>
                       </div>
@@ -291,13 +259,13 @@
                       >
                     </div>
                   </div>
-                  <!-- Feature 3 -->
-                  <div class="col-6 col-lg-3 feature-item border-end-lg">
+                  <div class="col-6 col-lg-3 feature-item">
                     <div
                       class="d-flex flex-column align-items-center text-center gap-2"
                     >
                       <div
-                        class="feature-icon-box bg-subtle-blue text-primary rounded-circle d-flex align-items-center justify-content-center live-icon mb-1"
+                        class="feature-icon-box bg-subtle-blue text-primary rounded-circle d-flex align-items-center justify-content-center mb-1 live-icon"
+                        style="width: 50px; height: 50px"
                       >
                         <i class="fa-solid fa-hospital fs-5"></i>
                       </div>
@@ -307,13 +275,13 @@
                       <small class="text-muted fs-7">Safe & clean clinic</small>
                     </div>
                   </div>
-                  <!-- Feature 4 -->
                   <div class="col-6 col-lg-3 feature-item">
                     <div
                       class="d-flex flex-column align-items-center text-center gap-2"
                     >
                       <div
-                        class="feature-icon-box bg-subtle-blue text-primary rounded-circle d-flex align-items-center justify-content-center live-icon mb-1"
+                        class="feature-icon-box bg-subtle-blue text-primary rounded-circle d-flex align-items-center justify-content-center mb-1 live-icon"
+                        style="width: 50px; height: 50px"
                       >
                         <i class="fa-regular fa-clock fs-5"></i>
                       </div>
@@ -327,17 +295,12 @@
               </div>
             </div>
 
-            <!-- 3. OUR SERVICES PREVIEW -->
+            <!-- Our Services Preview (Home Page) -->
             <div class="container my-5">
               <div
-                class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4"
+                class="d-flex align-items-center justify-content-between mb-4"
               >
                 <div>
-                  <small
-                    class="text-uppercase tracking-wider fw-bold text-muted d-block mb-1"
-                    style="font-size: 0.75rem; letter-spacing: 1px"
-                    >WHAT WE OFFER</small
-                  >
                   <h3 class="fw-bold text-dark m-0">Our Services</h3>
                   <p class="text-muted m-0" style="font-size: 0.9rem">
                     We offer a wide range of medical services to meet your
@@ -345,112 +308,85 @@
                   </p>
                 </div>
                 <button
-                  class="btn btn-link text-primary text-decoration-none fw-semibold p-0 d-flex align-items-center gap-1"
+                  class="btn btn-link text-primary text-decoration-none fw-semibold p-0"
                   type="button"
-                  data-bs-toggle="tab"
-                  data-bs-target="#services-tab-pane"
                   onclick="document.getElementById('services-tab').click()"
                 >
-                  <span>View All Services</span>
-                  <i
-                    class="fa-solid fa-arrow-right"
-                    style="font-size: 0.8rem"
-                  ></i>
+                  View All Services →
                 </button>
               </div>
-
               <div class="row g-4">
-                <div class="col-6 col-lg-3">
+                <div class="col-md-3">
                   <div
-                    class="card service-card border-0 shadow-sm rounded-4 p-3 h-100 bg-white"
+                    class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
                   >
                     <div
-                      class="service-icon-box bg-subtle-primary text-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                      style="width: 45px; height: 45px"
+                      class="text-primary bg-subtle-blue rounded-3 p-3 d-inline-flex mb-3"
+                      style="width: 50px; height: 50px"
                     >
-                      <i class="fa-solid fa-stethoscope fs-5"></i>
+                      <i class="fa-solid fa-user-doctor fs-5"></i>
                     </div>
-                    <h6
-                      class="fw-bold text-dark mb-1"
-                      style="font-size: 0.95rem"
-                    >
+                    <h5 class="fw-bold text-dark mb-2 fs-6">
                       General Medicine
-                    </h6>
-                    <small class="text-muted" style="font-size: 0.75rem"
-                      >Full medical examination and follow-up</small
-                    >
+                    </h5>
+                    <p class="text-muted fs-7 mb-0">
+                      Full medical examination and follow-up
+                    </p>
                   </div>
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-md-3">
                   <div
-                    class="card service-card border-0 shadow-sm rounded-4 p-3 h-100 bg-white"
+                    class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
                   >
                     <div
-                      class="service-icon-box bg-subtle-primary text-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                      style="width: 45px; height: 45px"
+                      class="text-primary bg-subtle-blue rounded-3 p-3 d-inline-flex mb-3"
+                      style="width: 50px; height: 50px"
                     >
                       <i class="fa-solid fa-child fs-5"></i>
                     </div>
-                    <h6
-                      class="fw-bold text-dark mb-1"
-                      style="font-size: 0.95rem"
-                    >
-                      Pediatrics
-                    </h6>
-                    <small class="text-muted" style="font-size: 0.75rem"
-                      >Care for your little ones</small
-                    >
+                    <h5 class="fw-bold text-dark mb-2 fs-6">Pediatrics</h5>
+                    <p class="text-muted fs-7 mb-0">
+                      Care for your little ones
+                    </p>
                   </div>
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-md-3">
                   <div
-                    class="card service-card border-0 shadow-sm rounded-4 p-3 h-100 bg-white"
+                    class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
                   >
                     <div
-                      class="service-icon-box bg-subtle-primary text-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                      style="width: 45px; height: 45px"
+                      class="text-primary bg-subtle-blue rounded-3 p-3 d-inline-flex mb-3"
+                      style="width: 50px; height: 50px"
                     >
-                      <i class="fa-solid fa-hand-dots fs-5"></i>
+                      <i class="fa-solid fa-hand-holding-medical fs-5"></i>
                     </div>
-                    <h6
-                      class="fw-bold text-dark mb-1"
-                      style="font-size: 0.95rem"
-                    >
-                      Dermatology
-                    </h6>
-                    <small class="text-muted" style="font-size: 0.75rem"
-                      >Healthy skin, confident you</small
-                    >
+                    <h5 class="fw-bold text-dark mb-2 fs-6">Dermatology</h5>
+                    <p class="text-muted fs-7 mb-0">
+                      Healthy skin, confident you
+                    </p>
                   </div>
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-md-3">
                   <div
-                    class="card service-card border-0 shadow-sm rounded-4 p-3 h-100 bg-white"
+                    class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
                   >
                     <div
-                      class="service-icon-box bg-subtle-primary text-primary rounded-circle d-flex align-items-center justify-content-center mb-3"
-                      style="width: 45px; height: 45px"
+                      class="text-primary bg-subtle-blue rounded-3 p-3 d-inline-flex mb-3"
+                      style="width: 50px; height: 50px"
                     >
                       <i class="fa-solid fa-heart-pulse fs-5"></i>
                     </div>
-                    <h6
-                      class="fw-bold text-dark mb-1"
-                      style="font-size: 0.95rem"
-                    >
-                      Cardiology
-                    </h6>
-                    <small class="text-muted" style="font-size: 0.75rem"
-                      >Heart care, life care</small
-                    >
+                    <h5 class="fw-bold text-dark mb-2 fs-6">Cardiology</h5>
+                    <p class="text-muted fs-7 mb-0">Heart care, life care</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- 4. OUR EXPERT DOCTORS PREVIEW -->
+            <!-- Our Expert Doctors Preview (Home Page) -->
             <div class="container my-5">
               <div
-                class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4"
+                class="d-flex align-items-center justify-content-between mb-4"
               >
                 <div>
                   <h3 class="fw-bold text-dark m-0">Our Expert Doctors</h3>
@@ -459,22 +395,15 @@
                   </p>
                 </div>
                 <button
-                  class="btn btn-link text-primary text-decoration-none fw-semibold p-0 d-flex align-items-center gap-1"
+                  class="btn btn-link text-primary text-decoration-none fw-semibold p-0"
                   type="button"
-                  data-bs-toggle="tab"
-                  data-bs-target="#doctors-tab-pane"
                   onclick="document.getElementById('doctors-tab').click()"
                 >
-                  <span>View All Doctors</span>
-                  <i
-                    class="fa-solid fa-arrow-right"
-                    style="font-size: 0.8rem"
-                  ></i>
+                  View All Doctors →
                 </button>
               </div>
 
               <div class="row g-4">
-                <!-- Doctor 1 -->
                 <div class="col-6 col-lg-3">
                   <div
                     class="card doctor-card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white"
@@ -500,7 +429,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- Doctor 2 -->
                 <div class="col-6 col-lg-3">
                   <div
                     class="card doctor-card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white"
@@ -526,7 +454,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- Doctor 3 -->
                 <div class="col-6 col-lg-3">
                   <div
                     class="card doctor-card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white"
@@ -552,7 +479,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- Doctor 4 -->
                 <div class="col-6 col-lg-3">
                   <div
                     class="card doctor-card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white"
@@ -581,48 +507,42 @@
               </div>
             </div>
 
-            <!-- 5. LOGIN / REGISTER BANNER -->
+            <!-- Login / Register Banner -->
             <div class="container my-5" id="authSection">
               <div
-                class="card login-banner-card border-0 shadow-lg rounded-5 overflow-hidden bg-white p-4 p-lg-5"
+                class="card border-0 shadow-lg rounded-5 overflow-hidden bg-white p-4 p-lg-5"
               >
                 <div class="row align-items-center g-4">
-                  <div
-                    class="col-lg-6 text-center text-lg-start border-end-lg-custom pe-lg-5"
-                  >
+                  <div class="col-lg-6 text-center text-lg-start pe-lg-5">
                     <div
                       class="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mb-3"
                     >
-                      <img src="images/H.png" alt="CarePlus Logo" height="42" />
+                      <img src="images/H.png" alt="Logo" height="42" />
                       <span class="fw-bold fs-4 text-dark">CarePlus</span>
                     </div>
                     <h2
                       class="fw-bold text-dark mb-2"
-                      style="font-size: 1.8rem; line-height: 1.3"
+                      style="font-size: 1.8rem"
                     >
                       Your Health,<br />Our Priority
                     </h2>
-                    <p
-                      class="text-muted mb-4"
-                      style="font-size: 0.95rem; max-width: 400px"
-                    >
+                    <p class="text-muted mb-4" style="font-size: 0.95rem">
                       Access your account to book appointments, view your
                       medical records and more.
                     </p>
                     <div class="text-center">
                       <img
                         src="images/02-appointment-stethoscope.png"
-                        alt="Medical Stethoscope"
+                        alt="Stethoscope"
                         class="img-fluid"
-                        style="max-height: 200px; object-fit: contain"
+                        style="max-height: 180px; object-fit: contain"
                       />
                     </div>
                   </div>
-
                   <div class="col-lg-6 ps-lg-4">
                     <div class="auth-form-wrapper p-2">
                       <ul
-                        class="nav nav-pills custom-auth-tabs justify-content-center mb-4 border-bottom pb-2"
+                        class="nav nav-pills justify-content-center mb-4 border-bottom pb-2"
                         id="authTab"
                         role="tablist"
                       >
@@ -634,7 +554,6 @@
                             data-bs-target="#login-pane"
                             type="button"
                             role="tab"
-                            aria-selected="true"
                           >
                             Login
                           </button>
@@ -647,20 +566,16 @@
                             data-bs-target="#register-pane"
                             type="button"
                             role="tab"
-                            aria-selected="false"
                           >
                             Register
                           </button>
                         </li>
                       </ul>
-
                       <div class="tab-content" id="authTabContent">
-                        <!-- Login Pane -->
                         <div
                           class="tab-pane fade show active"
                           id="login-pane"
                           role="tabpanel"
-                          aria-labelledby="login-tab"
                         >
                           <h5 class="fw-bold text-dark text-center mb-1">
                             Welcome Back
@@ -699,165 +614,6 @@
                                 style="font-size: 0.8rem"
                                 >Password</label
                               >
-                              <div class="mb-3">
-                                <label
-                                  class="form-label text-muted"
-                                  style="font-size: 0.8rem"
-                                  >Password</label
-                                >
-                                <div
-                                  class="input-group border rounded-pill bg-light px-3 py-1"
-                                >
-                                  <span
-                                    class="input-group-text bg-transparent border-0 text-muted ps-0"
-                                  >
-                                    <i class="fa-solid fa-lock"></i>
-                                  </span>
-                                  <!-- أضفنا id هنا باسم passwordInput -->
-                                  <input
-                                    type="password"
-                                    id="passwordInput"
-                                    class="form-control bg-transparent border-0 shadow-none"
-                                    placeholder="Enter your password"
-                                    style="font-size: 0.85rem"
-                                  />
-                                  <!-- أضفنا id للأيقونة وجعلناها قابلة للنقر -->
-                                  <span
-                                    class="input-group-text bg-transparent border-0 text-muted pe-0 cursor-pointer"
-                                    id="togglePassword"
-                                    style="cursor: pointer"
-                                  >
-                                    <i
-                                      class="fa-regular fa-eye"
-                                      id="eyeIcon"
-                                    ></i>
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              class="d-flex align-items-center justify-content-between mb-4"
-                              style="font-size: 0.85rem"
-                            >
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  id="rememberMe"
-                                />
-                                <label
-                                  class="form-check-label text-muted"
-                                  for="rememberMe"
-                                  >Remember me</label
-                                >
-                              </div>
-                              <a
-                                href="#"
-                                class="text-primary text-decoration-none"
-                                >Forgot password?</a
-                              >
-                            </div>
-                            <button
-                              type="submit"
-                              class="btn btn-primary w-100 rounded-pill py-2.5 fw-semibold mb-3 shadow-sm border-0"
-                              style="background-color: #0d6efd"
-                            >
-                              Log In
-                            </button>
-
-                            <button
-                              type="button"
-                              class="btn btn-outline-secondary w-100 rounded-pill py-2.5 fw-semibold d-flex align-items-center justify-content-center gap-2 bg-white text-dark border shadow-sm"
-                              style="font-size: 0.85rem"
-                            >
-                              <i class="fa-brands fa-google text-danger"></i>
-                              <span>Continue with Google</span>
-                            </button>
-                            <p
-                              class="text-center text-muted mt-4 mb-0"
-                              style="font-size: 0.85rem"
-                            >
-                              Don't have an account?
-                              <a
-                                href="#"
-                                onclick="
-                                  document
-                                    .getElementById('register-tab')
-                                    .click();
-                                  return false;
-                                "
-                                class="text-primary text-decoration-none fw-semibold"
-                                >Create New Account</a
-                              >
-                            </p>
-                          </form>
-                        </div>
-
-                        <!-- Register Pane -->
-                        <div
-                          class="tab-pane fade"
-                          id="register-pane"
-                          role="tabpanel"
-                          aria-labelledby="register-tab"
-                        >
-                          <h5 class="fw-bold text-dark text-center mb-1">
-                            Create Account
-                          </h5>
-                          <p
-                            class="text-muted text-center mb-4"
-                            style="font-size: 0.85rem"
-                          >
-                            Sign up to get started with CarePlus
-                          </p>
-                          <form>
-                            <div class="mb-3">
-                              <label
-                                class="form-label text-muted"
-                                style="font-size: 0.8rem"
-                                >Full Name</label
-                              >
-                              <div
-                                class="input-group border rounded-pill bg-light px-3 py-1"
-                              >
-                                <span
-                                  class="input-group-text bg-transparent border-0 text-muted ps-0"
-                                  ><i class="fa-regular fa-user"></i
-                                ></span>
-                                <input
-                                  type="text"
-                                  class="form-control bg-transparent border-0 shadow-none"
-                                  placeholder="Enter your full name"
-                                  style="font-size: 0.85rem"
-                                />
-                              </div>
-                            </div>
-                            <div class="mb-3">
-                              <label
-                                class="form-label text-muted"
-                                style="font-size: 0.8rem"
-                                >Email Address</label
-                              >
-                              <div
-                                class="input-group border rounded-pill bg-light px-3 py-1"
-                              >
-                                <span
-                                  class="input-group-text bg-transparent border-0 text-muted ps-0"
-                                  ><i class="fa-regular fa-envelope"></i
-                                ></span>
-                                <input
-                                  type="email"
-                                  class="form-control bg-transparent border-0 shadow-none"
-                                  placeholder="Enter your email"
-                                  style="font-size: 0.85rem"
-                                />
-                              </div>
-                            </div>
-                            <div class="mb-4">
-                              <label
-                                class="form-label text-muted"
-                                style="font-size: 0.8rem"
-                                >Password</label
-                              >
                               <div
                                 class="input-group border rounded-pill bg-light px-3 py-1"
                               >
@@ -867,34 +623,60 @@
                                 ></span>
                                 <input
                                   type="password"
+                                  id="passwordInput"
                                   class="form-control bg-transparent border-0 shadow-none"
-                                  placeholder="Create a password"
+                                  placeholder="Enter your password"
                                   style="font-size: 0.85rem"
                                 />
+                                <span
+                                  class="input-group-text bg-transparent border-0 text-muted cursor-pointer"
+                                  id="togglePassword"
+                                  ><i class="fa-regular fa-eye" id="eyeIcon"></i
+                                ></span>
                               </div>
                             </div>
                             <button
                               type="submit"
-                              class="btn btn-primary w-100 rounded-pill py-2.5 fw-semibold mb-3 shadow-sm border-0"
-                              style="background-color: #0d6efd"
+                              class="btn btn-primary w-100 rounded-pill py-2.5 fw-semibold shadow-sm border-0"
                             >
-                              Sign Up
+                              Login
                             </button>
-                            <p
-                              class="text-center text-muted mt-4 mb-0"
-                              style="font-size: 0.85rem"
-                            >
-                              Already have an account?
-                              <a
-                                href="#"
-                                onclick="
-                                  document.getElementById('login-tab').click();
-                                  return false;
-                                "
-                                class="text-primary text-decoration-none fw-semibold"
-                                >Log In</a
+                          </form>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="register-pane"
+                          role="tabpanel"
+                        >
+                          <h5 class="fw-bold text-dark text-center mb-1">
+                            Create Account
+                          </h5>
+                          <p
+                            class="text-muted text-center mb-4"
+                            style="font-size: 0.85rem"
+                          >
+                            Sign up to get started
+                          </p>
+                          <form>
+                            <div class="mb-3">
+                              <label
+                                class="form-label text-muted"
+                                style="font-size: 0.8rem"
+                                >Full Name</label
                               >
-                            </p>
+                              <input
+                                type="text"
+                                class="form-control border rounded-pill bg-light px-3 py-2"
+                                placeholder="Enter your name"
+                                style="font-size: 0.85rem"
+                              />
+                            </div>
+                            <button
+                              type="submit"
+                              class="btn btn-primary w-100 rounded-pill py-2.5 fw-semibold shadow-sm border-0"
+                            >
+                              Register
+                            </button>
                           </form>
                         </div>
                       </div>
@@ -904,11 +686,10 @@
               </div>
             </div>
           </div>
-          <!-- END: HOME SECTION --
 
-          <!-- ================================================================= -->
-          <!-- 👨‍⚕️ [TAB 2]: DOCTORS SECTION (قسم الأطباء) -->
-          <!-- ================================================================= -->
+          <!-- ************************************************************* -->
+          <!-- 🩺 [TAB 2]: DOCTORS SECTION (المطابق للصورة تماماً) -->
+          <!-- ************************************************************* -->
           <div
             class="tab-pane fade"
             id="doctors-tab-pane"
@@ -916,299 +697,251 @@
             aria-labelledby="doctors-tab"
             tabindex="0"
           >
-            <!-- بانر العنوان بتصميم مطابق للصورة -->
+            <!-- Header Banner داخل صفحة الأطباء -->
             <div
-              class="doctors-banner-section rounded-4 p-4 p-lg-5 mb-4 position-relative overflow-hidden"
+              class="position-relative rounded-5 p-5 mb-5 overflow-hidden shadow-sm"
+              style="
+                background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+                border: 1px solid #d2e3fc;
+              "
             >
               <div class="row align-items-center">
-                <div class="col-lg-8 z-2">
+                <div class="col-lg-7">
                   <span
-                    class="text-uppercase tracking-wider fw-bold text-primary mb-2 d-block"
-                    style="font-size: 0.85rem; letter-spacing: 2px"
+                    class="text-uppercase fw-bold text-primary mb-2 d-block"
+                    style="font-size: 0.75rem; letter-spacing: 2px"
+                    >OUR DOCTORS</span
                   >
-                    OUR DOCTORS
-                  </span>
                   <h2 class="display-6 fw-bold text-dark mb-2">
                     Meet Our Specialists
                   </h2>
-                  <p class="text-primary mb-0" style="font-size: 0.95rem">
+                  <p class="text-muted fs-7 mb-0">
                     Our team of experienced doctors is here to provide you with
                     the best care.
                   </p>
                 </div>
+                <div class="col-lg-5 text-end d-none d-lg-block">
+                  <img
+                    src="images/09-medical-consultation.png"
+                    alt="Doctors Banner"
+                    class="img-fluid opacity-75"
+                    style="max-height: 150px; object-fit: contain"
+                  />
+                </div>
               </div>
             </div>
 
-            <!-- أزرار التصفية حسب التخصص -->
-            <div
-              class="d-flex align-items-center flex-wrap gap-2 mb-4"
-              id="doctorFilterBtns"
-            >
+            <!-- Doctor Filter Buttons -->
+            <div class="d-flex flex-wrap gap-2 mb-4" id="doctorFilterBtns">
               <button
-                class="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow-sm border-0 filter-btn active"
+                class="btn btn-primary rounded-pill px-4 py-2 fs-8 fw-semibold shadow-sm active filter-btn"
                 data-filter="all"
-                style="font-size: 0.85rem"
               >
                 All
               </button>
               <button
-                class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold shadow-sm filter-btn"
+                class="btn btn-outline-primary rounded-pill px-3 py-2 fs-8 filter-btn"
                 data-filter="general"
-                style="font-size: 0.85rem"
               >
                 General Medicine
               </button>
               <button
-                class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold shadow-sm filter-btn"
+                class="btn btn-outline-primary rounded-pill px-3 py-2 fs-8 filter-btn"
                 data-filter="pediatrics"
-                style="font-size: 0.85rem"
               >
                 Pediatrics
               </button>
               <button
-                class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold shadow-sm filter-btn"
+                class="btn btn-outline-primary rounded-pill px-3 py-2 fs-8 filter-btn"
                 data-filter="dermatology"
-                style="font-size: 0.85rem"
               >
                 Dermatology
               </button>
               <button
-                class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold shadow-sm filter-btn"
+                class="btn btn-outline-primary rounded-pill px-3 py-2 fs-8 filter-btn"
                 data-filter="cardiology"
-                style="font-size: 0.85rem"
               >
                 Cardiology
               </button>
             </div>
 
-            <!-- شبكة كروت الأطباء المفصلة مع إضافة data-category لكل كرت -->
+            <!-- Doctors Grid -->
             <div class="row g-4 mb-5" id="doctorsGrid">
-              <!-- Doctor 1: General Medicine -->
-              <div class="col-6 col-lg-3 doctor-item" data-category="general">
+              <div class="col-md-3 doctor-item" data-category="general">
                 <div
-                  class="card doctor-card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white p-3"
+                  class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white h-100 p-3"
                 >
-                  <div
-                    class="doctor-img-wrapper bg-light text-center rounded-4 pt-3 mb-3"
-                  >
+                  <div class="bg-light text-center pt-3 rounded-3 mb-3">
                     <img
                       src="images/03-doctor-ahmed-card.png"
-                      alt="Dr. Ahmed Hassan"
+                      alt="Dr. Ahmed"
                       class="img-fluid"
                       style="height: 160px; object-fit: contain"
                     />
                   </div>
-                  <h6 class="fw-bold text-dark mb-1" style="font-size: 0.95rem">
-                    Dr. Ahmed Hassan
-                  </h6>
-                  <p class="text-muted mb-2" style="font-size: 0.8rem">
-                    General Practitioner
-                  </p>
-
+                  <h6 class="fw-bold text-dark mb-1">Dr. Ahmed Hassan</h6>
+                  <small class="text-muted d-block mb-2"
+                    >General Practitioner</small
+                  >
                   <div
-                    class="d-flex align-items-center gap-2 text-muted mb-1"
+                    class="d-flex flex-column gap-1 mb-3"
                     style="font-size: 0.75rem"
                   >
-                    <i class="fa-solid fa-briefcase-medical text-primary"></i>
-                    <span>10 years experience</span>
+                    <span class="text-secondary"
+                      ><i class="fa-solid fa-star text-warning me-1"></i> 10
+                      years experience</span
+                    >
+                    <span class="text-success"
+                      ><i class="fa-solid fa-circle-check me-1"></i> Available
+                      today</span
+                    >
                   </div>
-                  <div
-                    class="d-flex align-items-center gap-2 text-muted mb-3"
-                    style="font-size: 0.75rem"
+                  <a
+                    href="booking.html"
+                    target="_blank"
+                    class="btn btn-sm btn-primary w-100 rounded-pill py-2 shadow-sm"
+                    >Book Appointment</a
                   >
-                    <i class="fa-regular fa-clock text-success"></i>
-                    <span>Available today</span>
-                  </div>
-
-                  <button
-                    class="btn btn-primary w-100 rounded-pill py-2 fw-semibold shadow-sm border-0 mt-auto"
-                    style="font-size: 0.8rem; background-color: #0d6efd"
-                  >
-                    Book Appointment
-                  </button>
                 </div>
               </div>
-
-              <!-- Doctor 2: Pediatrics -->
-              <div
-                class="col-6 col-lg-3 doctor-item"
-                data-category="pediatrics"
-              >
+              <div class="col-md-3 doctor-item" data-category="pediatrics">
                 <div
-                  class="card doctor-card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white p-3"
+                  class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white h-100 p-3"
                 >
-                  <div
-                    class="doctor-img-wrapper bg-light text-center rounded-4 pt-3 mb-3"
-                  >
+                  <div class="bg-light text-center pt-3 rounded-3 mb-3">
                     <img
                       src="images/04-doctor-sara-card.png"
-                      alt="Dr. Sara Mohamed"
+                      alt="Dr. Sara"
                       class="img-fluid"
                       style="height: 160px; object-fit: contain"
                     />
                   </div>
-                  <h6 class="fw-bold text-dark mb-1" style="font-size: 0.95rem">
-                    Dr. Sara Mohamed
-                  </h6>
-                  <p class="text-muted mb-2" style="font-size: 0.8rem">
-                    Pediatrics
-                  </p>
-
+                  <h6 class="fw-bold text-dark mb-1">Dr. Sara Mohamed</h6>
+                  <small class="text-muted d-block mb-2">Pediatrics</small>
                   <div
-                    class="d-flex align-items-center gap-2 text-muted mb-1"
+                    class="d-flex flex-column gap-1 mb-3"
                     style="font-size: 0.75rem"
                   >
-                    <i class="fa-solid fa-briefcase-medical text-primary"></i>
-                    <span>8 years experience</span>
+                    <span class="text-secondary"
+                      ><i class="fa-solid fa-star text-warning me-1"></i> 8
+                      years experience</span
+                    >
+                    <span class="text-success"
+                      ><i class="fa-solid fa-circle-check me-1"></i> Available
+                      today</span
+                    >
                   </div>
-                  <div
-                    class="d-flex align-items-center gap-2 text-muted mb-3"
-                    style="font-size: 0.75rem"
+                  <a
+                    href="booking.html"
+                    target="_blank"
+                    class="btn btn-sm btn-primary w-100 rounded-pill py-2 shadow-sm"
+                    >Book Appointment</a
                   >
-                    <i class="fa-regular fa-clock text-success"></i>
-                    <span>Available today</span>
-                  </div>
-
-                  <button
-                    class="btn btn-primary w-100 rounded-pill py-2 fw-semibold shadow-sm border-0 mt-auto"
-                    style="font-size: 0.8rem; background-color: #0d6efd"
-                  >
-                    Book Appointment
-                  </button>
                 </div>
               </div>
-
-              <!-- Doctor 3: Dermatology -->
-              <div
-                class="col-6 col-lg-3 doctor-item"
-                data-category="dermatology"
-              >
+              <div class="col-md-3 doctor-item" data-category="dermatology">
                 <div
-                  class="card doctor-card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white p-3"
+                  class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white h-100 p-3"
                 >
-                  <div
-                    class="doctor-img-wrapper bg-light text-center rounded-4 pt-3 mb-3"
-                  >
+                  <div class="bg-light text-center pt-3 rounded-3 mb-3">
                     <img
                       src="images/05-doctor-omar-card.png"
-                      alt="Dr. Omar El-Sayed"
+                      alt="Dr. Omar"
                       class="img-fluid"
                       style="height: 160px; object-fit: contain"
                     />
                   </div>
-                  <h6 class="fw-bold text-dark mb-1" style="font-size: 0.95rem">
-                    Dr. Omar El-Sayed
-                  </h6>
-                  <p class="text-muted mb-2" style="font-size: 0.8rem">
-                    Dermatology
-                  </p>
-
+                  <h6 class="fw-bold text-dark mb-1">Dr. Omar El-Sayed</h6>
+                  <small class="text-muted d-block mb-2">Dermatology</small>
                   <div
-                    class="d-flex align-items-center gap-2 text-muted mb-1"
+                    class="d-flex flex-column gap-1 mb-3"
                     style="font-size: 0.75rem"
                   >
-                    <i class="fa-solid fa-briefcase-medical text-primary"></i>
-                    <span>12 years experience</span>
+                    <span class="text-secondary"
+                      ><i class="fa-solid fa-star text-warning me-1"></i> 12
+                      years experience</span
+                    >
+                    <span class="text-success"
+                      ><i class="fa-solid fa-circle-check me-1"></i> Available
+                      today</span
+                    >
                   </div>
-                  <div
-                    class="d-flex align-items-center gap-2 text-muted mb-3"
-                    style="font-size: 0.75rem"
+                  <a
+                    href="booking.html"
+                    target="_blank"
+                    class="btn btn-sm btn-primary w-100 rounded-pill py-2 shadow-sm"
+                    >Book Appointment</a
                   >
-                    <i class="fa-regular fa-clock text-success"></i>
-                    <span>Available today</span>
-                  </div>
-
-                  <button
-                    class="btn btn-primary w-100 rounded-pill py-2 fw-semibold shadow-sm border-0 mt-auto"
-                    style="font-size: 0.8rem; background-color: #0d6efd"
-                  >
-                    Book Appointment
-                  </button>
                 </div>
               </div>
-
-              <!-- Doctor 4: Cardiology -->
-              <div
-                class="col-6 col-lg-3 doctor-item"
-                data-category="cardiology"
-              >
+              <div class="col-md-3 doctor-item" data-category="cardiology">
                 <div
-                  class="card doctor-card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white p-3"
+                  class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white h-100 p-3"
                 >
-                  <div
-                    class="doctor-img-wrapper bg-light text-center rounded-4 pt-3 mb-3"
-                  >
+                  <div class="bg-light text-center pt-3 rounded-3 mb-3">
                     <img
                       src="images/06-doctor-laila-card.png"
-                      alt="Dr. Laila Gamal"
+                      alt="Dr. Laila"
                       class="img-fluid"
                       style="height: 160px; object-fit: contain"
                     />
                   </div>
-                  <h6 class="fw-bold text-dark mb-1" style="font-size: 0.95rem">
-                    Dr. Laila Gamal
-                  </h6>
-                  <p class="text-muted mb-2" style="font-size: 0.8rem">
-                    Cardiology
-                  </p>
-
+                  <h6 class="fw-bold text-dark mb-1">Dr. Laila Gamal</h6>
+                  <small class="text-muted d-block mb-2">Cardiology</small>
                   <div
-                    class="d-flex align-items-center gap-2 text-muted mb-1"
+                    class="d-flex flex-column gap-1 mb-3"
                     style="font-size: 0.75rem"
                   >
-                    <i class="fa-solid fa-briefcase-medical text-primary"></i>
-                    <span>9 years experience</span>
+                    <span class="text-secondary"
+                      ><i class="fa-solid fa-star text-warning me-1"></i> 9
+                      years experience</span
+                    >
+                    <span class="text-success"
+                      ><i class="fa-solid fa-circle-check me-1"></i> Available
+                      today</span
+                    >
                   </div>
-                  <div
-                    class="d-flex align-items-center gap-2 text-muted mb-3"
-                    style="font-size: 0.75rem"
+                  <a
+                    href="booking.html"
+                    target="_blank"
+                    class="btn btn-sm btn-primary w-100 rounded-pill py-2 shadow-sm"
+                    >Book Appointment</a
                   >
-                    <i class="fa-regular fa-clock text-success"></i>
-                    <span>Available today</span>
-                  </div>
-
-                  <button
-                    class="btn btn-primary w-100 rounded-pill py-2 fw-semibold shadow-sm border-0 mt-auto"
-                    style="font-size: 0.8rem; background-color: #0d6efd"
-                  >
-                    Book Appointment
-                  </button>
                 </div>
               </div>
             </div>
 
-            <!-- البانر السفلي (Your Health is in Good Hands) -->
+            <!-- Bottom Banner: Your Health is in Good Hands -->
             <div
-              class="card border-0 shadow-sm rounded-5 overflow-hidden bg-white p-4 p-lg-5 mb-3"
+              class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 bg-white mb-4"
             >
               <div class="row align-items-center g-4">
                 <div class="col-lg-6">
-                  <h3 class="fw-bold text-dark mb-3" style="font-size: 1.6rem">
+                  <h3 class="fw-bold text-dark mb-3">
                     Your Health is in Good Hands
                   </h3>
-                  <p
-                    class="text-muted mb-4"
-                    style="font-size: 0.9rem; line-height: 1.6"
-                  >
+                  <p class="text-muted fs-7 mb-4">
                     Our doctors are committed to providing high-quality care
                     with compassion, professionalism, and the latest medical
                     technology.
                   </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary rounded-pill px-4 py-2.5 fw-semibold shadow-sm border-0"
-                    style="background-color: #0d6efd; font-size: 0.9rem"
+                  <button
+                    class="btn btn-primary rounded-pill px-4 py-2.5 fw-semibold shadow-sm"
+                    type="button"
+                    onclick="document.getElementById('about-tab').click()"
                   >
                     Learn More
-                  </a>
+                  </button>
                 </div>
                 <div class="col-lg-6">
-                  <div class="rounded-4 overflow-hidden shadow-sm">
+                  <div
+                    class="rounded-4 overflow-hidden shadow-sm bg-light"
+                    style="height: 220px"
+                  >
                     <img
-                      src="images/07-clinic-reception.png"
+                      src="images/02-appointment-stethoscope.png"
                       alt="Clinic Reception"
-                      class="img-fluid w-100"
-                      style="max-height: 250px; object-fit: cover"
+                      class="w-100 h-100 object-fit-cover"
                     />
                   </div>
                 </div>
@@ -1217,7 +950,7 @@
           </div>
 
           <!-- ************************************************************* -->
-          <!-- 🩺 [TAB 3]: SERVICES SECTION (قسم الخدمات الطبية) -->
+          <!-- 🏥 [TAB 3]: SERVICES SECTION -->
           <!-- ************************************************************* -->
           <div
             class="tab-pane fade"
@@ -1226,14 +959,218 @@
             aria-labelledby="services-tab"
             tabindex="0"
           >
-            <h4 class="fw-bold mb-2">Clinic Services</h4>
-            <p class="text-muted m-0">
-              Explore our comprehensive medical care options.
-            </p>
+            <div class="mb-4">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-1 fs-8">
+                  <li class="breadcrumb-item">
+                    <a href="index.html" class="text-decoration-none text-muted"
+                      >Home</a
+                    >
+                  </li>
+                  <li
+                    class="breadcrumb-item active text-primary fw-semibold"
+                    aria-current="page"
+                  >
+                    Services
+                  </li>
+                </ol>
+              </nav>
+              <h2 class="fw-bold text-dark">Our Medical Services</h2>
+              <p class="text-muted fs-7">
+                We provide comprehensive medical care with modern technology and
+                a team of experienced doctors.
+              </p>
+            </div>
+
+            <!-- Search & Filter Buttons -->
+            <div class="mb-5">
+              <div
+                class="input-group bg-white rounded-pill px-3 py-2 shadow-sm border mb-3"
+                style="max-width: 500px"
+              >
+                <span
+                  class="input-group-text bg-transparent border-0 text-muted"
+                  ><i class="fa-solid fa-magnifying-glass"></i
+                ></span>
+                <input
+                  type="text"
+                  id="serviceSearchInput"
+                  class="form-control border-0 shadow-none bg-transparent fs-7"
+                  placeholder="Search for a service..."
+                />
+              </div>
+
+              <div class="d-flex flex-wrap gap-2" id="filterButtonsContainer">
+                <button
+                  class="btn filter-btn btn-primary rounded-pill px-4 py-2 fs-8 fw-semibold shadow-sm active"
+                  data-category="all"
+                >
+                  All
+                </button>
+                <button
+                  class="btn filter-btn btn-white bg-white text-dark rounded-pill px-3 py-2 fs-8 border shadow-sm"
+                  data-category="general"
+                >
+                  General Medicine
+                </button>
+                <button
+                  class="btn filter-btn btn-white bg-white text-dark rounded-pill px-3 py-2 fs-8 border shadow-sm"
+                  data-category="pediatrics"
+                >
+                  Pediatrics
+                </button>
+                <button
+                  class="btn filter-btn btn-white bg-white text-dark rounded-pill px-3 py-2 fs-8 border shadow-sm"
+                  data-category="dermatology"
+                >
+                  Dermatology
+                </button>
+                <button
+                  class="btn filter-btn btn-white bg-white text-dark rounded-pill px-3 py-2 fs-8 border shadow-sm"
+                  data-category="cardiology"
+                >
+                  Cardiology
+                </button>
+                <button
+                  class="btn filter-btn btn-white bg-white text-dark rounded-pill px-3 py-2 fs-8 border shadow-sm"
+                  data-category="dental"
+                >
+                  Dental Care
+                </button>
+                <button
+                  class="btn filter-btn btn-white bg-white text-dark rounded-pill px-3 py-2 fs-8 border shadow-sm"
+                  data-category="orthopedics"
+                >
+                  Orthopedics
+                </button>
+              </div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="row g-4" id="servicesGrid">
+              <div
+                class="col-md-4 service-card-item"
+                data-category="general"
+                data-title="general medicine family medicine"
+              >
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="rounded-3 bg-subtle-blue text-primary p-3 d-inline-flex mb-3"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="fa-solid fa-user-doctor fs-5"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">General Medicine</h5>
+                  <p class="text-muted fs-7 mb-0">
+                    Family medicine and preventive care for all ages.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-4 service-card-item"
+                data-category="pediatrics"
+                data-title="pediatrics children health"
+              >
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="rounded-3 bg-subtle-blue text-primary p-3 d-inline-flex mb-3"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="fa-solid fa-child fs-5"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">Pediatrics</h5>
+                  <p class="text-muted fs-7 mb-0">
+                    Specialized care for your children's health.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-4 service-card-item"
+                data-category="dermatology"
+                data-title="dermatology skin care"
+              >
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="rounded-3 bg-subtle-blue text-primary p-3 d-inline-flex mb-3"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="fa-solid fa-hand-holding-medical fs-5"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">Dermatology</h5>
+                  <p class="text-muted fs-7 mb-0">
+                    Healthy skin, confident you.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-4 service-card-item"
+                data-category="cardiology"
+                data-title="cardiology heart care"
+              >
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="rounded-3 bg-subtle-blue text-primary p-3 d-inline-flex mb-3"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="fa-solid fa-heart-pulse fs-5"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">Cardiology</h5>
+                  <p class="text-muted fs-7 mb-0">Heart care, life care.</p>
+                </div>
+              </div>
+              <div
+                class="col-md-4 service-card-item"
+                data-category="dental"
+                data-title="dental care teeth smile"
+              >
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="rounded-3 bg-subtle-blue text-primary p-3 d-inline-flex mb-3"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="fa-solid fa-tooth fs-5"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">Dental Care</h5>
+                  <p class="text-muted fs-7 mb-0">
+                    Healthy smiles, brighter future.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-4 service-card-item"
+                data-category="orthopedics"
+                data-title="orthopedics bone muscle"
+              >
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="rounded-3 bg-subtle-blue text-primary p-3 d-inline-flex mb-3"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="fa-solid fa-bone fs-5"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">Orthopedics</h5>
+                  <p class="text-muted fs-7 mb-0">
+                    Move better, live stronger.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- ************************************************************* -->
-          <!-- 🏥 [TAB 4]: ABOUT US SECTION (قسم من نحن) -->
+          <!-- ℹ️ [TAB 4]: ABOUT SECTION -->
           <!-- ************************************************************* -->
           <div
             class="tab-pane fade"
@@ -1242,14 +1179,74 @@
             aria-labelledby="about-tab"
             tabindex="0"
           >
-            <h4 class="fw-bold mb-2">About Us</h4>
-            <p class="text-muted m-0">
-              Learn more about our facilities and medical standards.
-            </p>
+            <div class="row align-items-center g-5 mb-5">
+              <div class="col-lg-6">
+                <span
+                  class="text-uppercase tracking-wider fw-bold text-primary mb-1 d-block"
+                  style="font-size: 0.8rem; letter-spacing: 1.5px"
+                  >ABOUT US</span
+                >
+                <h2 class="display-6 fw-bold text-dark mb-3">
+                  Your Health, Our Mission
+                </h2>
+                <p class="text-muted fs-7 mb-4">
+                  At CarePlus, we believe that good health leads to a better
+                  life. We are committed to providing high-quality,
+                  compassionate care with modern technology and a dedicated team
+                  of experienced medical professionals[cite: 4].
+                </p>
+                <div class="d-flex flex-column gap-2 mb-4">
+                  <div
+                    class="d-flex align-items-center gap-2 text-dark fs-7 fw-medium"
+                  >
+                    <i class="fa-solid fa-circle-check text-primary"></i>
+                    Experienced & trusted doctors
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-2 text-dark fs-7 fw-medium"
+                  >
+                    <i class="fa-solid fa-circle-check text-primary"></i> Modern
+                    and advanced technology
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-2 text-dark fs-7 fw-medium"
+                  >
+                    <i class="fa-solid fa-circle-check text-primary"></i>
+                    Comfortable and clean environment
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <img
+                  src="images/07-clinic-reception.png"
+                  alt="About"
+                  class="img-fluid rounded-4 shadow-lg w-100 bg-light"
+                  style="object-fit: contain; max-height: 350px"
+                />
+              </div>
+            </div>
+            <div class="row g-4 text-center pt-4 border-top">
+              <div class="col-6 col-md-3">
+                <h3 class="fw-bold text-primary mb-1">10+</h3>
+                <p class="text-muted fs-7 m-0">Specialists</p>
+              </div>
+              <div class="col-6 col-md-3">
+                <h3 class="fw-bold text-primary mb-1">8K+</h3>
+                <p class="text-muted fs-7 m-0">Happy Patients</p>
+              </div>
+              <div class="col-6 col-md-3">
+                <h3 class="fw-bold text-primary mb-1">5+</h3>
+                <p class="text-muted fs-7 m-0">Years of Experience</p>
+              </div>
+              <div class="col-6 col-md-3">
+                <h3 class="fw-bold text-primary mb-1">100%</h3>
+                <p class="text-muted fs-7 m-0">Commitment to Care</p>
+              </div>
+            </div>
           </div>
 
           <!-- ************************************************************* -->
-          <!-- 📞 [TAB 5]: CONTACT SECTION (قسم اتصل بنا) -->
+          <!-- 📞 [TAB 5]: CONTACT SECTION (مع خريطة Google Maps حقيقية لمصر) -->
           <!-- ************************************************************* -->
           <div
             class="tab-pane fade"
@@ -1258,17 +1255,172 @@
             aria-labelledby="contact-tab"
             tabindex="0"
           >
-            <h4 class="fw-bold mb-2">Contact Details</h4>
-            <p class="text-muted m-0">
-              Get in touch with us via email, phone, or location map.
-            </p>
+            <div class="mb-5">
+              <span
+                class="text-uppercase tracking-wider fw-bold text-primary mb-1 d-block"
+                style="font-size: 0.8rem; letter-spacing: 1.5px"
+                >CONTACT US</span
+              >
+              <h2 class="display-6 fw-bold text-dark mb-2">Get in Touch</h2>
+              <p class="text-muted fs-7">
+                We're here to help! Feel free to reach out to us for any
+                questions, appointments, or support[cite: 3].
+              </p>
+            </div>
+
+            <div class="row g-4 mb-5">
+              <div class="col-md-3">
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="text-primary bg-subtle-blue rounded-3 p-3 d-inline-flex mb-3"
+                  >
+                    <i class="fa-solid fa-location-dot fs-5"></i>
+                  </div>
+                  <h6 class="fw-bold text-dark mb-1">Address</h6>
+                  <p class="text-muted fs-8 mb-2">
+                    125 Health Street, Cairo, Egypt
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="text-primary bg-subtle-blue rounded-3 p-3 d-inline-flex mb-3"
+                  >
+                    <i class="fa-solid fa-phone fs-5"></i>
+                  </div>
+                  <h6 class="fw-bold text-dark mb-1">Phone</h6>
+                  <p class="text-muted fs-8 mb-1">+20 123 456 7890[cite: 3]</p>
+                  <small class="text-muted" style="font-size: 0.65rem"
+                    >Mon - Fri, 8:00 AM - 8:00 PM</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="text-primary bg-subtle-blue rounded-3 p-3 d-inline-flex mb-3"
+                  >
+                    <i class="fa-solid fa-envelope fs-5"></i>
+                  </div>
+                  <h6 class="fw-bold text-dark mb-1">Email</h6>
+                  <p class="text-muted fs-8 mb-1">info@careplus.com[cite: 3]</p>
+                  <small class="text-muted" style="font-size: 0.65rem"
+                    >We reply within 24 hours[cite: 3]</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100"
+                >
+                  <div
+                    class="text-primary bg-subtle-blue rounded-3 p-3 d-inline-flex mb-3"
+                  >
+                    <i class="fa-solid fa-clock fs-5"></i>
+                  </div>
+                  <h6 class="fw-bold text-dark mb-1">Working Hours</h6>
+                  <p class="text-muted fs-8 mb-1">
+                    Mon - Fri: 8:00 AM - 8:00 PM
+                  </p>
+                  <small class="text-muted" style="font-size: 0.65rem"
+                    >Sat: 9:00 AM - 4:00 PM</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white h-100"
+                >
+                  <h4 class="fw-bold text-dark mb-3">Send Us a Message</h4>
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-medium fs-7 mb-1"
+                        >Full Name *</label
+                      ><input
+                        type="text"
+                        class="form-control rounded-3 py-2 bg-light border-0"
+                        placeholder="Enter your name"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-medium fs-7 mb-1"
+                        >Email Address *</label
+                      ><input
+                        type="email"
+                        class="form-control rounded-3 py-2 bg-light border-0"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-medium fs-7 mb-1"
+                        >Message *</label
+                      ><textarea
+                        class="form-control rounded-3 bg-light border-0"
+                        rows="3"
+                        placeholder="Type your message here..."
+                        required
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100 rounded-3 py-2.5 fw-semibold border-0 shadow-sm"
+                    >
+                      <i class="fa-solid fa-paper-plane me-2"></i> Send Message
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div
+                  class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100 d-flex flex-column justify-content-between"
+                >
+                  <h4 class="fw-bold text-dark mb-3">Our Location</h4>
+                  <!-- Google Maps Embedded Map (القاهرة، مصر) -->
+                  <div
+                    class="rounded-4 overflow-hidden mb-3 shadow-sm"
+                    style="height: 250px"
+                  >
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.755490425424!2d31.2357116!3d30.0444196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840bc520d2047%3A0xbaefc264a2c002bc!2sCairo%2C%20Cairo%20Governorate%2C%20Egypt!5e0!3m2!1sen!2seg!4v1650000000000!5m2!1sen!2seg"
+                      width="100%"
+                      height="100%"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    >
+                    </iframe>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-dark mb-0 fs-7">
+                      CarePlus Medical Clinic
+                    </h6>
+                    <small class="text-muted fs-8"
+                      >125 Health Street, Cairo, Egypt</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- JavaScript Scripts -->
-    <script src="js/main.js"></script>
+    <!-- JS Files -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
