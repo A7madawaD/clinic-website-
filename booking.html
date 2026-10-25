@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarePlus - Book Appointment</title>
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-light">
+    <!-- ================================================================= -->
+    <!-- 1. NAVBAR WITH BACK TO HOME BUTTON -->
+    <!-- ================================================================= -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm sticky-top"
+    >
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Brand Logo & Name -->
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center gap-2 m-0 text-decoration-none"
+        >
+          <img src="images/H.png" alt="CarePlus" height="36" />
+          <span class="fw-bold fs-5 text-dark">CarePlus</span>
+        </a>
+
+        <!-- Back to Home Button -->
+        <div>
+          <a
+            href="index.html"
+            class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-semibold border-2 d-inline-flex align-items-center gap-2 shadow-sm text-decoration-none"
+          >
+            <i class="fa-solid fa-arrow-left fs-7"></i>
+            <span>Back to Home</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================================================================= -->
+    <!-- 2. BOOK APPOINTMENT SECTION -->
+    <!-- ================================================================= -->
+    <section
+      id="appointmentSection"
+      class="py-5 position-relative bg-white border-bottom"
+    >
+      <div class="container">
+        <!-- Header Title -->
+        <div class="mb-5">
+          <span
+            class="text-uppercase tracking-wider fw-bold text-primary mb-1 d-block"
+            style="font-size: 0.8rem; letter-spacing: 1.5px"
+            >BOOK APPOINTMENT</span
+          >
+          <h1 class="display-6 fw-bold text-dark mb-2">Make an Appointment</h1>
+          <p class="text-muted" style="font-size: 0.95rem">
+            Choose your doctor, date and time, and get the care you need[cite:
+            2].
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-start">
+          <!-- Appointment Form -->
+          <div class="col-lg-7">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
+              <h4 class="fw-bold text-dark mb-4">Book Your Appointment</h4>
+
+              <form id="bookingForm">
+                <!-- Full Name -->
+                <div class="mb-3">
+                  <label class="form-label text-dark fw-medium fs-7 mb-1"
+                    >Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="patientName"
+                    class="form-control rounded-3 py-2.5 bg-light border-0"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+
+                <!-- Phone Number -->
+                <div class="mb-3">
+                  <label class="form-label text-dark fw-medium fs-7 mb-1"
+                    >Phone Number *</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control rounded-3 py-2.5 bg-light border-0"
+                    placeholder="+20 123 456 7890"
+                    required
+                  />
+                </div>
+
+                <!-- Department -->
+                <div class="mb-3">
+                  <label class="form-label text-dark fw-medium fs-7 mb-1"
+                    >Department *</label
+                  >
+                  <select
+                    class="form-select rounded-3 py-2.5 bg-light border-0 text-muted"
+                    required
+                  >
+                    <option selected disabled>Select Department</option>
+                    <option value="general">General Medicine</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="dermatology">Dermatology</option>
+                    <option value="cardiology">Cardiology</option>
+                  </select>
+                </div>
+
+                <!-- Doctor -->
+                <div class="mb-3">
+                  <label class="form-label text-dark fw-medium fs-7 mb-1"
+                    >Doctor
+                    <span class="text-muted fw-normal">(Optional)</span></label
+                  >
+                  <select
+                    class="form-select rounded-3 py-2.5 bg-light border-0 text-muted"
+                  >
+                    <option selected disabled>Select Doctor</option>
+                    <option>Dr. Ahmed Hassan</option>
+                    <option>Dr. Sara Mohamed</option>
+                    <option>Dr. Omar El-Sayed</option>
+                    <option>Dr. Laila Gamal</option>
+                  </select>
+                </div>
+
+                <!-- Date & Time -->
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label class="form-label text-dark fw-medium fs-7 mb-1"
+                      >Date *</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control rounded-3 py-2.5 bg-light border-0 text-muted"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-dark fw-medium fs-7 mb-1"
+                      >Time *</label
+                    >
+                    <input
+                      type="time"
+                      class="form-control rounded-3 py-2.5 bg-light border-0 text-muted"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button
+                  type="submit"
+                  class="btn btn-primary w-100 rounded-3 py-3 fw-semibold border-0 shadow-sm"
+                  style="background-color: #0d6efd"
+                >
+                  Book Appointment
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Feature Cards Side -->
+          <div class="col-lg-5 ps-lg-4">
+            <div class="d-flex flex-column gap-3">
+              <!-- Feature 1 -->
+              <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
+                <div class="d-flex align-items-center gap-3">
+                  <div
+                    class="rounded-circle bg-subtle-blue text-primary d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="fa-solid fa-power-off fs-5"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-dark mb-1">Easy & Fast</h6>
+                    <p class="text-muted fs-7 mb-0">
+                      Book your appointment in minutes
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
+                <div class="d-flex align-items-center gap-3">
+                  <div
+                    class="rounded-circle bg-subtle-blue text-primary d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="fa-solid fa-clock-rotate-left fs-5"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-dark mb-1">No Waiting</h6>
+                    <p class="text-muted fs-7 mb-0">
+                      Save time with online booking
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
+                <div class="d-flex align-items-center gap-3">
+                  <div
+                    class="rounded-circle bg-subtle-blue text-primary d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="fa-solid fa-shield-halved fs-5"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-dark mb-1">Secure</h6>
+                    <p class="text-muted fs-7 mb-0">
+                      Your data is safe with us
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

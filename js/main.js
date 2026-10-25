@@ -134,3 +134,85 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+/* ================================================================= */
+/* 🔗 BOOK APPOINTMENT SCROLL & FORM HANDLING                         */
+/* ================================================================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const bookBtn = document.getElementById("bookAppointmentBtn");
+  const appointmentSection = document.getElementById("appointmentSection");
+  const bookingForm = document.getElementById("bookingForm");
+
+  // 1. التمرير السلس إلى قسم حجز الموعد عند النقر على الزر
+  if (bookBtn && appointmentSection) {
+    bookBtn.addEventListener("click", function () {
+      appointmentSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+
+  // 2. منع إعادة تحميل الصفحة عند إرسال النموذج (Form Submit)
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("تم استلام طلب الحجز بنجاح!");
+    });
+  }
+});
+// loding to dashboard
+document.addEventListener("DOMContentLoaded", function () {
+  const bookingForm = document.getElementById("bookingForm");
+
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", function (e) {
+      e.preventDefault(); // منع إعادة تحميل الصفحة
+      alert("تم تسجيل الحجز بنجاح! جاري الانتقال إلى لوحة التحكم...");
+      window.location.href = "dashboard.html"; // الانتقال للوحة التحكم
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // 1. عند إرسال نموذج الحجز في booking.html
+  const bookingForm = document.getElementById("bookingForm");
+  const patientNameInput = document.getElementById("patientName");
+
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // جلب الاسم المدخل من المستخدم
+      const enteredName =
+        patientNameInput && patientNameInput.value.trim() !== ""
+          ? patientNameInput.value.trim()
+          : "Ahmed";
+
+      // حفظ الاسم في ذاكرة المتصفح المحلية
+      localStorage.setItem("carePlusUserName", enteredName);
+
+      alert("تم تسجيل الحجز بنجاح! جاري الانتقال إلى لوحة التحكم...");
+
+      // التوجيه لصفحة لوحة التحكم
+      window.location.href = "dashboard.html";
+    });
+  }
+
+  // 2. عند فتح لوحة التحكم dashboard.html
+  const dashboardUserName = document.getElementById("dashboardUserName");
+  const greetingUserName = document.getElementById("greetingUserName");
+
+  // قراءة الاسم المخزن
+  const savedName = localStorage.getItem("carePlusUserName");
+
+  if (savedName) {
+    // تحديث الاسم العلوي بجوار الصورة الشخصية
+    if (dashboardUserName) {
+      dashboardUserName.textContent = savedName;
+    }
+    // تحديث الاسم في عنوان الترحيب (Hello, Name 👋)
+    if (greetingUserName) {
+      greetingUserName.textContent = savedName;
+    }
+  }
+});

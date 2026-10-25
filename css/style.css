@@ -205,6 +205,24 @@ html {
     text-align: center;
   }
 }
+/* ================================================================= */
+/* 📅 BOOKING & DASHBOARD CUSTOM STYLES                              */
+/* ================================================================= */
+.bg-subtle-blue {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.fs-7 {
+  font-size: 0.85rem !important;
+}
+
+.fs-8 {
+  font-size: 0.75rem !important;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
 
 /* ================================================================= */
 /* RESPONSIVE BREAKPOINTS (تنسيقات الأجهزة المتجاوبة) */
